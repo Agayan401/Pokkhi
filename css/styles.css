@@ -841,3 +841,108 @@ body {
 
     font-size: .95rem;
 }
+
+/* =========================
+   FEATURED BIRD
+========================= */
+
+.featured-bird {
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.12);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    cursor: pointer;
+}
+
+.featured-bird:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.16);
+}
+
+.featured-image-wrapper {
+
+    position: relative;
+}
+
+.featured-image-wrapper img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.featured-tag {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    background: rgba(20,83,45,.92);
+
+    color: white;
+
+    padding: .4rem .8rem;
+
+    border-radius: 999px;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    letter-spacing: .3px;
+}
+
+.featured-description {
+
+    margin-top: 1rem;
+
+    color: #374151;
+
+    line-height: 1.6;
+
+    font-size: .95rem;
+}
+
+.featured-btn {
+
+    margin-top: 1rem;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: .7rem 1.2rem;
+
+    background: #14532d;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.featured-btn:hover {
+
+    opacity: .9;
+}
