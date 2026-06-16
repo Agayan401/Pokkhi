@@ -1,52 +1,275 @@
-<section class="homepage-panels">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Pokhi | The Birds of Assam
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            POKHI
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#directory">
+                    Directory
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="overlay">
+
+            <div class="hero-content">
+
+                <h1>
+                    POKHI
+                </h1>
+
+                <p class="subtitle">
+                    The Birds of Assam
+                </p>
+
+                <p class="hero-text">
+
+                    Explore Assam's avian diversity through
+                    photographs, Assamese names and
+                    conservation information.
+
+                </p>
+
+                <div class="search-wrapper">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by English or Assamese name...">
+
+                    <div
+                        id="suggestions"
+                        class="suggestions">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="speciesCount">
+                0
+            </h2>
+
+            <p>
+                Species
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="threatenedCount">
+                0
+            </h2>
+
+            <p>
+                Threatened Species
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT + BIRD OF DAY -->
+
+    <section class="homepage-panels">
+
+        <div
+            class="about-panel"
+            id="about">
+
+            <h2>
+                About Pokhi
+            </h2>
+
+            <p>
+                The skies of Assam are filled with incredible
+                birdlife, but their true local identities are
+                rarely found in field guides.
+            </p>
+
+            <p>
+                To celebrate and preserve this heritage,
+                this growing directory pairs high-quality
+                field photography and quick habitat facts
+                with authentic Assamese names, creating
+                a visual catalog of the birds in our own
+                backyards.
+            </p>
+
+            <p>
+                Whether you are a seasoned birder,
+                a student, or simply someone who loves
+                Assam's natural heritage, we invite you
+                to explore and use the feedback section
+                to help our community catalog grow!
+            </p>
+
+        </div>
+
+        <div class="bird-of-day-panel">
+
+            <h2>
+                Bird of the Day
+            </h2>
+
+            <div id="birdOfDay"></div>
+
+        </div>
+
+    </section>
+
+    <!-- DIRECTORY -->
+
+    <section
+        class="directory"
+        id="directory">
+
+        <h2>
+            Bird Directory
+        </h2>
+
+        <p id="resultCount"></p>
+
+        <button
+            id="resetSearchBtn"
+            class="reset-search-btn"
+            style="display:none;">
+
+            Show All Birds
+
+        </button>
+
+        <select id="statusFilter">
+
+            <option value="All">
+                All Status
+            </option>
+
+            <option value="LC">
+                Least Concern
+            </option>
+
+            <option value="NT">
+                Near Threatened
+            </option>
+
+            <option value="VU">
+                Vulnerable
+            </option>
+
+            <option value="EN">
+                Endangered
+            </option>
+
+            <option value="CR">
+                Critically Endangered
+            </option>
+
+        </select>
+
+        <div id="birdGrid"></div>
+
+    </section>
+
+    <!-- MODAL -->
 
     <div
-        class="about-panel"
-        id="about">
+        id="birdModal"
+        class="modal">
 
-        <h2>
-            About Pokhi
-        </h2>
+        <div class="modal-content">
 
-        <p>
+            <span id="closeModal">
+                &times;
+            </span>
 
-            The skies of Assam are filled with incredible
-            birdlife, but their true local identities are
-            rarely found in field guides.
+            <img
+                id="modalImage"
+                src=""
+                alt="Bird">
 
-        </p>
+            <h2 id="modalName"></h2>
 
-        <p>
+            <p id="modalAssamese"></p>
 
-            To celebrate and preserve this heritage,
-            this growing directory pairs high-quality
-            field photography and quick habitat facts
-            with authentic Assamese names, creating
-            a visual catalog of the birds in our own
-            backyards.
+            <p id="modalStatus"></p>
 
-        </p>
+            <p id="modalDescription"></p>
 
-        <p>
-
-            Whether you are a seasoned birder,
-            a student, or simply someone who loves
-            Assam's natural heritage, we invite you
-            to explore and use the feedback section
-            to help our community catalog grow!
-
-        </p>
+        </div>
 
     </div>
 
-    <div class="bird-of-day-panel">
+    <!-- FOOTER -->
 
-        <h2>
-            Bird of the Day
-        </h2>
+    <footer class="footer">
 
-        <div id="birdOfDay"></div>
+        <p>
+            © 2025 Pokhi • The Birds of Assam
+        </p>
 
-    </div>
+    </footer>
 
-</section>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
