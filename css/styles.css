@@ -50,13 +50,18 @@ body {
 
 .logo {
 
-    color: white;
+    display: flex;
 
-    font-size: 1.5rem;
+    align-items: center;
+}
 
-    font-weight: 800;
+.logo img {
 
-    letter-spacing: 2px;
+    height: 55px;
+
+    width: auto;
+
+    display: block;
 }
 
 .nav-links {
