@@ -40,20 +40,99 @@ async function loadBirds() {
 
 function updateStatistics() {
 
+    const speciesCount =
+        birds.length;
+
     document.getElementById(
         "speciesCount"
-    ).textContent = birds.length;
+    ).textContent =
+        speciesCount;
 
-    const threatened =
-        birds.filter(bird =>
-            ["VU", "EN", "CR"].includes(
-                (bird.iucnStatus || "").trim()
-            )
-        );
+    const lc =
+        birds.filter(
+            b => b.iucnStatus === "LC"
+        ).length;
+
+    const nt =
+        birds.filter(
+            b => b.iucnStatus === "NT"
+        ).length;
+
+    const vu =
+        birds.filter(
+            b => b.iucnStatus === "VU"
+        ).length;
+
+    const en =
+        birds.filter(
+            b => b.iucnStatus === "EN"
+        ).length;
+
+    const cr =
+        birds.filter(
+            b => b.iucnStatus === "CR"
+        ).length;
 
     document.getElementById(
-        "threatenedCount"
-    ).textContent = threatened.length;
+        "countLC"
+    ).textContent =
+        `LC ${lc}`;
+
+    document.getElementById(
+        "countNT"
+    ).textContent =
+        `NT ${nt}`;
+
+    document.getElementById(
+        "countVU"
+    ).textContent =
+        `VU ${vu}`;
+
+    document.getElementById(
+        "countEN"
+    ).textContent =
+        `EN ${en}`;
+
+    document.getElementById(
+        "countCR"
+    ).textContent =
+        `CR ${cr}`;
+
+    const total =
+        lc + nt + vu + en + cr;
+
+    if (total > 0) {
+
+        document.getElementById(
+            "barLC"
+        ).style.width =
+            `${(lc / total) * 100}%`;
+
+        document.getElementById(
+            "barNT"
+        ).style.width =
+            `${(nt / total) * 100}%`;
+
+        document.getElementById(
+            "barVU"
+        ).style.width =
+            `${(vu / total) * 100}%`;
+
+        document.getElementById(
+            "barEN"
+        ).style.width =
+            `${(en / total) * 100}%`;
+
+        document.getElementById(
+            "barCR"
+        ).style.width =
+            `${(cr / total) * 100}%`;
+    }
+
+    document.getElementById(
+        "lastUpdated"
+    ).textContent =
+        "June 2025";
 }
 
 function updateResultCount() {
