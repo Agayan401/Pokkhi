@@ -269,6 +269,10 @@ container.innerHTML = `
 function renderBirds(birdList) {
 
     birdGrid.innerHTML = "";
+    const speciesProgress =
+    document.getElementById(
+        "speciesProgress"
+    );
 
     const birdsToShow =
         birdList.slice(
@@ -319,6 +323,15 @@ function renderBirds(birdList) {
         birdGrid.appendChild(card);
     });
 
+if (speciesProgress) {
+
+    speciesProgress.textContent =
+        `${Math.min(
+            visibleBirds,
+            birdList.length
+        )} of ${birdList.length} species shown`;
+}
+    
 if (
     visibleBirds >=
     birdList.length
