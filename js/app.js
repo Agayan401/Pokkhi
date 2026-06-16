@@ -640,5 +640,104 @@ loadMoreBtn.addEventListener(
         );
     }
 );
+const suggestionForm =
+    document.getElementById(
+        "birdSuggestionForm"
+    );
 
+if (suggestionForm) {
+
+    suggestionForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+            const englishName =
+                document
+                    .getElementById(
+                        "englishName"
+                    )
+                    .value
+                    .trim();
+
+            const assameseName =
+                document
+                    .getElementById(
+                        "assameseName"
+                    )
+                    .value
+                    .trim();
+
+            const location =
+                document
+                    .getElementById(
+                        "location"
+                    )
+                    .value
+                    .trim();
+
+            const notes =
+                document
+                    .getElementById(
+                        "notes"
+                    )
+                    .value
+                    .trim();
+
+            const contributorName =
+                document
+                    .getElementById(
+                        "contributorName"
+                    )
+                    .value
+                    .trim();
+
+            const formMessage =
+                document
+                    .getElementById(
+                        "formMessage"
+                    );
+
+            if (
+                !englishName &&
+                !assameseName
+            ) {
+
+                formMessage.textContent =
+                    "Please enter either an English or Assamese name.";
+
+                return;
+            }
+
+            try {
+
+                await fetch(
+                    "https://script.google.com/macros/s/AKfycbzDuo46jkZjM3mIxkgx8x9QopgF1zioD3Qy2S6qyrXalWVhrZJ12mTKWh-Sv5DTD12l/exec",
+                    {
+                        method: "POST",
+
+                        body: JSON.stringify({
+                            englishName,
+                            assameseName,
+                            location,
+                            notes,
+                            contributorName
+                        })
+                    }
+                );
+
+                formMessage.textContent =
+                    "Thank you for your contribution!";
+
+                suggestionForm.reset();
+
+            } catch(error) {
+
+                formMessage.textContent =
+                    "Submission failed. Please try again.";
+            }
+        }
+    );
+}
 loadBirds();
