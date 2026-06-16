@@ -7,6 +7,15 @@ const statusFilter = document.getElementById("statusFilter");
 const suggestionsBox = document.getElementById("suggestions");
 const resetSearchBtn = document.getElementById("resetSearchBtn");
 
+const loadMoreBtn =
+    document.getElementById(
+        "loadMoreBtn"
+    );
+
+let birdsPerPage = 24;
+
+let visibleBirds = 24;
+
 function getStatusClass(status) {
 
     switch (status) {
@@ -261,7 +270,13 @@ function renderBirds(birdList) {
 
     birdGrid.innerHTML = "";
 
-    birdList.forEach(bird => {
+    const birdsToShow =
+        birdList.slice(
+            0,
+            visibleBirds
+        );
+
+    birdsToShow.forEach(bird => {
 
         const card =
             document.createElement("div");
@@ -286,7 +301,7 @@ function renderBirds(birdList) {
 
                 <span
                     class="status-badge ${getStatusClass(
-                    bird.iucnStatus
+                        bird.iucnStatus
                     )}">
 
                     ${bird.iucnStatus || ""}
@@ -303,8 +318,21 @@ function renderBirds(birdList) {
 
         birdGrid.appendChild(card);
     });
-}
 
+    if (
+        visibleBirds >=
+        birdList.length
+    ) {
+
+        loadMoreBtn.style.display =
+            "none";
+    }
+    else {
+
+        loadMoreBtn.style.display =
+            "inline-block";
+    }
+}
 function showSuggestions(searchTerm) {
 
     if (!suggestionsBox) return;
@@ -437,7 +465,7 @@ function filterBirds() {
                 matchesStatus
             );
         });
-
+    visibleBirds = 24;
     renderBirds(filteredBirds);
 
     updateResultCount();
@@ -477,6 +505,8 @@ if (resetSearchBtn) {
 
             filteredBirds = [...birds];
 
+            visibleBirds = 24;
+            
             renderBirds(filteredBirds);
 
             updateResultCount();
@@ -579,6 +609,19 @@ document.addEventListener(
             suggestionsBox.style.display =
                 "none";
         }
+    }
+);
+
+loadMoreBtn.addEventListener(
+    "click",
+    () => {
+
+        visibleBirds +=
+            birdsPerPage;
+
+        renderBirds(
+            filteredBirds
+        );
     }
 );
 
