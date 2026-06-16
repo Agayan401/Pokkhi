@@ -515,17 +515,15 @@ body {
 
     display: inline-block;
 
-    margin-top: .8rem;
-
     padding: .35rem .8rem;
-
-    background: #dcfce7;
 
     border-radius: 999px;
 
     font-size: .85rem;
 
     font-weight: 600;
+
+    color: white;
 }
 
 /* =========================
