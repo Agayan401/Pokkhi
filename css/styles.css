@@ -810,6 +810,123 @@ body {
 }
 
 /* =========================
+   CONTRIBUTION FORM
+========================= */
+
+.contribute-section {
+
+    max-width: 1200px;
+
+    margin: 4rem auto;
+
+    padding: 0 1rem;
+}
+
+.contribute-card {
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 3rem;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+}
+
+.contribute-card h2 {
+
+    text-align: center;
+
+    color: #14532d;
+
+    margin-bottom: 1rem;
+}
+
+.contribute-intro {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    max-width: 700px;
+
+    margin: 0 auto 2rem;
+}
+
+.form-group {
+
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: .5rem;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+}
+
+.form-group textarea {
+
+    resize: vertical;
+}
+
+.contribute-btn {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    background: #14532d;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.contribute-btn:hover {
+
+    opacity: .9;
+}
+
+#formMessage {
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
