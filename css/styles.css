@@ -415,8 +415,52 @@ body {
 }
 
 /* =========================
-   BIRD OF DAY
+   HOMEPAGE PANELS
 ========================= */
+
+.homepage-panels {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 2rem 1rem 4rem;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap: 2rem;
+}
+
+.about-panel,
+.bird-of-day-panel {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 2rem;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.08);
+}
+
+.about-panel h2,
+.bird-of-day-panel h2 {
+
+    color: #14532d;
+
+    margin-bottom: 1rem;
+}
+
+.about-panel p {
+
+    line-height: 1.8;
+
+    margin-bottom: 1rem;
+}
 
 #birdOfDay {
 
@@ -427,7 +471,9 @@ body {
 
 #birdOfDay .bird-card {
 
-    max-width: 500px;
+    width: 100%;
+
+    max-width: 100%;
 }
 
 /* =========================
@@ -544,6 +590,11 @@ body {
 ========================= */
 
 @media (max-width: 768px) {
+
+    .homepage-panels {
+
+    grid-template-columns: 1fr;
+    }
 
     .navbar {
 
