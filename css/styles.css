@@ -526,6 +526,35 @@ body {
     color: white;
 }
 
+/* IUCN STATUS COLORS */
+
+.status-lc {
+
+    background: #22c55e;
+}
+
+.status-nt {
+
+    background: #eab308;
+
+    color: #111827;
+}
+
+.status-vu {
+
+    background: #f97316;
+}
+
+.status-en {
+
+    background: #ef4444;
+}
+
+.status-cr {
+
+    background: #7f1d1d;
+}
+
 /* =========================
    HOMEPAGE PANELS
 ========================= */
