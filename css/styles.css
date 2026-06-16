@@ -9,34 +9,14 @@ html {
 }
 
 body {
+
     font-family: Inter, Arial, sans-serif;
+
     background: #f6f8f4;
+
     color: #1f2937;
-    line-height: 1.6;
-}
 
-.reset-search-btn {
-
-    margin-bottom: 1.5rem;
-
-    padding: 10px 18px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background: #14532d;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-weight: 600;
-}
-
-.reset-search-btn:hover {
-
-    opacity: .9;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -44,46 +24,62 @@ body {
 ========================= */
 
 .navbar {
+
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
 
-    background: rgba(20, 83, 45, 0.95);
+    background:
+        rgba(20, 83, 45, 0.95);
+
+    backdrop-filter: blur(10px);
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 1rem 2rem;
-
-    backdrop-filter: blur(10px);
 
     box-shadow:
         0 2px 10px rgba(0,0,0,.15);
 }
 
 .logo {
+
     color: white;
+
     font-size: 1.5rem;
+
     font-weight: 800;
+
     letter-spacing: 2px;
 }
 
 .nav-links {
+
     display: flex;
+
     gap: 1.5rem;
+
     list-style: none;
 }
 
 .nav-links a {
+
     color: white;
+
     text-decoration: none;
+
     font-weight: 600;
 }
 
 .nav-links a:hover {
-    opacity: .8;
+
+    opacity: .85;
 }
 
 /* =========================
@@ -91,55 +87,67 @@ body {
 ========================= */
 
 .hero {
+
     height: 80vh;
 
     background:
         linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.45)
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
         ),
         url("../images/hero.jpg");
 
     background-size: cover;
+
     background-position: center;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
 .hero-content {
+
     text-align: center;
+
     color: white;
 
     max-width: 900px;
+
     padding: 20px;
 }
 
 .hero h1 {
+
     font-size: 5rem;
+
     font-weight: 800;
+
     letter-spacing: 5px;
 
     margin-bottom: .3rem;
 }
 
 .subtitle {
+
     font-size: 1.4rem;
+
     margin-bottom: 1rem;
 }
 
 .hero-text {
+
     font-size: 1.15rem;
 
     max-width: 700px;
 
-    margin:
-        0 auto 2rem;
+    margin: 0 auto 2rem;
 }
 
 /* =========================
-   SEARCH WRAPPER
+   SEARCH
 ========================= */
 
 .search-wrapper {
@@ -147,6 +155,7 @@ body {
     position: relative;
 
     width: 100%;
+
     max-width: 650px;
 
     margin: 0 auto;
@@ -160,7 +169,7 @@ body {
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
     font-size: 1rem;
 
@@ -172,10 +181,6 @@ body {
 
     outline: none;
 }
-
-/* =========================
-   AUTOCOMPLETE
-========================= */
 
 .suggestions {
 
@@ -192,18 +197,16 @@ body {
 
     overflow: hidden;
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.15);
-
-    z-index: 1000;
-
     display: none;
-
-    text-align: left;
 
     max-height: 320px;
 
     overflow-y: auto;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+    z-index: 1000;
 }
 
 .suggestion-item {
@@ -212,31 +215,13 @@ body {
 
     cursor: pointer;
 
-    color: #111827;
-
-    border-bottom:
-        1px solid #f1f5f9;
-
     transition: .15s;
-}
-
-.suggestion-item:last-child {
-
-    border-bottom: none;
 }
 
 .suggestion-item:hover {
 
     background: #dcfce7;
 }
-
-.suggestion-item strong {
-
-    color: #14532d;
-}
-
-
-
 
 /* =========================
    DIRECTORY SUMMARY
@@ -255,62 +240,62 @@ body {
 
     background: white;
 
-    border-radius: 18px;
+    border-radius: 24px;
 
-    padding: 2rem;
+    padding: 2.5rem;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,.08);
+        0 10px 30px rgba(0,0,0,.08);
 
     text-align: center;
 }
 
 .summary-card h2 {
 
-    font-size: 3rem;
+    font-size: 4rem;
 
     color: #14532d;
 
-    margin-bottom: .25rem;
-}
-
-.summary-title {
-
-    font-size: 1.1rem;
-
-    font-weight: 600;
-
-    color: #374151;
+    line-height: 1;
 
     margin-bottom: .5rem;
 }
 
-.last-updated {
+.summary-title {
 
-    font-size: .95rem;
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    color: #374151;
+}
+
+.last-updated {
 
     color: #6b7280;
 
-    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+
+    margin-bottom: 1.75rem;
 }
 
 /* =========================
-   STATUS BAR
+   CONSERVATION BAR
 ========================= */
 
 .status-bar {
 
     display: flex;
 
-    height: 22px;
+    height: 26px;
 
     border-radius: 999px;
 
     overflow: hidden;
 
-    margin-bottom: 1rem;
-
     background: #e5e7eb;
+
+    margin-bottom: 1rem;
 }
 
 .status-segment {
@@ -318,29 +303,11 @@ body {
     transition: .3s ease;
 }
 
-.lc {
-    background: #22c55e;
-}
-
-.nt {
-    background: #eab308;
-}
-
-.vu {
-    background: #f97316;
-}
-
-.en {
-    background: #ef4444;
-}
-
-.cr {
-    background: #7f1d1d;
-}
-
-/* =========================
-   STATUS LEGEND
-========================= */
+.lc { background: #22c55e; }
+.nt { background: #eab308; }
+.vu { background: #f97316; }
+.en { background: #ef4444; }
+.cr { background: #7f1d1d; }
 
 .status-legend {
 
@@ -350,23 +317,20 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 1rem;
-
-    font-size: .95rem;
-
-    font-weight: 600;
+    gap: .8rem;
 }
 
 .status-legend span {
 
-    padding: .4rem .8rem;
+    padding: .45rem .85rem;
 
     border-radius: 999px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     color: white;
 }
+
 #countLC {
     background: #22c55e;
 }
@@ -387,173 +351,6 @@ body {
 #countCR {
     background: #7f1d1d;
 }
-/* =========================
-   SECTIONS
-========================= */
-
-.bird-of-day,
-.directory,
-.about {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 4rem 1rem;
-}
-
-.bird-of-day h2,
-.directory h2,
-.about h2 {
-
-    color: #14532d;
-
-    margin-bottom: 1rem;
-}
-
-/* =========================
-   RESULTS
-========================= */
-
-#resultCount {
-
-    margin-bottom: 1rem;
-
-    font-weight: 600;
-
-    color: #166534;
-}
-
-/* =========================
-   FILTER
-========================= */
-
-#statusFilter {
-
-    padding: 12px 16px;
-
-    border-radius: 10px;
-
-    border: 1px solid #d1d5db;
-
-    margin-bottom: 2rem;
-
-    background: white;
-}
-
-/* =========================
-   GRID
-========================= */
-
-#birdGrid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(260px, 1fr)
-        );
-
-    gap: 24px;
-}
-
-/* =========================
-   BIRD CARDS
-========================= */
-
-.bird-card {
-
-    background: white;
-
-    border-radius: 16px;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-    transition: .25s ease;
-
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.08);
-}
-
-.bird-card:hover {
-
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
-}
-
-.bird-card img {
-
-    width: 100%;
-
-    height: 230px;
-
-    object-fit: cover;
-}
-
-.bird-info {
-    padding: 1rem;
-}
-
-.bird-info h3 {
-
-    margin-bottom: .4rem;
-}
-
-.assamese-name {
-
-    color: #166534;
-
-    font-weight: 600;
-}
-
-.status-badge {
-
-    display: inline-block;
-
-    padding: .35rem .8rem;
-
-    border-radius: 999px;
-
-    font-size: .85rem;
-
-    font-weight: 600;
-
-    color: white;
-}
-
-/* IUCN STATUS COLORS */
-
-.status-lc {
-
-    background: #22c55e;
-}
-
-.status-nt {
-
-    background: #eab308;
-
-    color: #111827;
-}
-
-.status-vu {
-
-    background: #f97316;
-}
-
-.status-en {
-
-    background: #ef4444;
-}
-
-.status-cr {
-
-    background: #7f1d1d;
-}
 
 /* =========================
    HOMEPAGE PANELS
@@ -565,7 +362,7 @@ body {
 
     margin: 0 auto;
 
-    padding: 2rem 1rem 4rem;
+    padding: 1rem 1rem 4rem;
 
     display: grid;
 
@@ -580,12 +377,12 @@ body {
 
     background: white;
 
-    border-radius: 16px;
+    border-radius: 24px;
 
     padding: 2rem;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,.08);
+        0 10px 30px rgba(0,0,0,.08);
 }
 
 .about-panel h2,
@@ -601,7 +398,13 @@ body {
     line-height: 1.9;
 
     margin-bottom: 1rem;
+
+    color: #374151;
 }
+
+/* =========================
+   FEATURED BIRD
+========================= */
 
 #birdOfDay {
 
@@ -610,11 +413,274 @@ body {
     justify-content: center;
 }
 
-#birdOfDay .bird-card {
+.featured-bird {
 
     width: 100%;
 
-    max-width: 100%;
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    cursor: pointer;
+}
+
+.featured-bird:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.16);
+}
+
+.featured-image-wrapper {
+
+    position: relative;
+}
+
+.featured-image-wrapper img {
+
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.featured-tag {
+
+    position: absolute;
+
+    top: 14px;
+
+    left: 14px;
+
+    background:
+        rgba(20,83,45,.92);
+
+    color: white;
+
+    padding: .45rem .9rem;
+
+    border-radius: 999px;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+}
+
+.featured-description {
+
+    margin-top: 1rem;
+
+    color: #4b5563;
+
+    line-height: 1.7;
+
+    font-size: .95rem;
+}
+
+.featured-btn {
+
+    margin-top: 1rem;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: .8rem 1.2rem;
+
+    background: #14532d;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.featured-btn:hover {
+
+    opacity: .9;
+}
+
+/* =========================
+   DIRECTORY
+========================= */
+
+.directory {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 4rem 1rem;
+}
+
+.directory h2 {
+
+    color: #14532d;
+
+    margin-bottom: 1rem;
+}
+
+#statusFilter {
+
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    margin-bottom: 2rem;
+}
+
+.reset-search-btn {
+
+    margin-bottom: 1.5rem;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #14532d;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#birdGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(280px, 1fr)
+        );
+
+    gap: 1.75rem;
+}
+
+/* =========================
+   BIRD CARDS
+========================= */
+
+.bird-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    height: 100%;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.bird-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 16px 36px rgba(0,0,0,.14);
+}
+
+.bird-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.bird-info {
+
+    padding: 1.2rem;
+}
+
+.bird-info h3 {
+
+    margin-bottom: .5rem;
+
+    color: #111827;
+}
+
+.assamese-name {
+
+    color: #166534;
+
+    font-weight: 600;
+
+    margin-bottom: .75rem;
+}
+
+.status-badge {
+
+    display: inline-block;
+
+    padding: .35rem .8rem;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+}
+
+.status-lc {
+    background: #22c55e;
+    color: white;
+}
+
+.status-nt {
+    background: #eab308;
+    color: #111827;
+}
+
+.status-vu {
+    background: #f97316;
+    color: white;
+}
+
+.status-en {
+    background: #ef4444;
+    color: white;
+}
+
+.status-cr {
+    background: #7f1d1d;
+    color: white;
 }
 
 /* =========================
@@ -633,11 +699,12 @@ body {
         rgba(0,0,0,.75);
 
     justify-content: center;
+
     align-items: center;
 
     padding: 1rem;
 
-    z-index: 999;
+    z-index: 9999;
 }
 
 .modal-content {
@@ -645,52 +712,38 @@ body {
     background: white;
 
     width: 100%;
-    max-width: 750px;
 
-    border-radius: 16px;
-
-    overflow: hidden;
-
-    position: relative;
+    max-width: 850px;
 
     max-height: 90vh;
 
     overflow-y: auto;
+
+    border-radius: 24px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
 }
 
 .modal-content img {
 
     width: 100%;
 
-    height: 380px;
+    height: 450px;
 
     object-fit: cover;
-}
 
-.modal-content h2 {
-
-    padding:
-        1.5rem
-        1.5rem
-        .5rem;
-}
-
-.modal-content p {
-
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-#modalDescription {
-
-    padding-bottom: 2rem;
+    display: block;
 }
 
 #closeModal {
 
     position: absolute;
 
-    top: 12px;
+    top: 15px;
+
     right: 20px;
 
     font-size: 2rem;
@@ -698,15 +751,49 @@ body {
     color: white;
 
     cursor: pointer;
+
+    z-index: 10;
+
+    transition: .2s;
 }
 
-/* =========================
-   ABOUT
-========================= */
+#closeModal:hover {
 
-.about p {
+    transform: scale(1.1);
+}
 
-    max-width: 800px;
+#modalName {
+
+    padding: 1.5rem 1.5rem .5rem;
+
+    color: #14532d;
+}
+
+#modalAssamese {
+
+    padding: 0 1.5rem;
+
+    color: #166534;
+
+    font-weight: 600;
+}
+
+#modalStatus {
+
+    padding: 1rem 1.5rem;
+
+    font-weight: 700;
+
+    color: #374151;
+}
+
+#modalDescription {
+
+    padding: 0 1.5rem 2rem;
+
+    line-height: 1.8;
+
+    color: #374151;
 }
 
 /* =========================
@@ -715,6 +802,8 @@ body {
 
 .footer {
 
+    margin-top: 4rem;
+
     background: #14532d;
 
     color: white;
@@ -722,26 +811,44 @@ body {
     text-align: center;
 
     padding: 2rem 1rem;
+}
 
-    margin-top: 4rem;
+.footer p {
+
+    opacity: .95;
 }
 
 /* =========================
-   MOBILE
+   MOBILE RESPONSIVE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
     .homepage-panels {
 
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
+
+    .featured-image-wrapper img {
+
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
 
     .navbar {
 
         flex-direction: column;
 
-        gap: .8rem;
+        gap: .75rem;
+
+        padding: 1rem;
+    }
+
+    .nav-links {
+
+        gap: 1rem;
     }
 
     .hero {
@@ -764,185 +871,71 @@ body {
         font-size: 1rem;
     }
 
-    .stats {
+    .summary-card {
 
-        flex-direction: column;
+        padding: 2rem 1.25rem;
+    }
 
-        align-items: center;
+    .summary-card h2 {
+
+        font-size: 3rem;
+    }
+
+    .status-legend {
+
+        gap: .5rem;
+    }
+
+    .status-legend span {
+
+        font-size: .8rem;
+    }
+
+    .featured-image-wrapper img {
+
+        height: 260px;
+    }
+
+    .bird-card img {
+
+        height: 240px;
     }
 
     .modal-content img {
 
-        height: 250px;
+        height: 260px;
+    }
+
+    #birdGrid {
+
+        grid-template-columns: 1fr;
     }
 }
-/* =========================
-   FEATURED BIRD
-========================= */
 
-#birdOfDay .bird-card {
+@media (max-width: 480px) {
 
-    width: 100%;
+    .hero h1 {
 
-    overflow: hidden;
+        font-size: 2.5rem;
+    }
 
-    border-radius: 18px;
+    #searchInput {
 
-    box-shadow:
-        0 8px 24px rgba(0,0,0,.12);
+        padding: 16px;
+    }
 
-    transition:
-        transform .2s ease;
-}
+    .summary-card h2 {
 
-#birdOfDay .bird-card:hover {
+        font-size: 2.5rem;
+    }
 
-    transform:
-        translateY(-4px);
-}
+    .featured-image-wrapper img {
 
-#birdOfDay img {
+        height: 220px;
+    }
 
-    width: 100%;
+    .bird-card img {
 
-    height: 280px;
-
-    object-fit: cover;
-}
-
-#birdOfDay .bird-info {
-
-    padding: 1.25rem;
-}
-
-#birdOfDay h3 {
-
-    font-size: 1.4rem;
-
-    margin-bottom: .4rem;
-}
-
-#birdOfDay .assamese-name {
-
-    font-size: 1rem;
-
-    color: #6b7280;
-
-    margin-bottom: .75rem;
-}
-
-.featured-description {
-
-    margin-top: 1rem;
-
-    line-height: 1.6;
-
-    color: #374151;
-
-    font-size: .95rem;
-}
-
-/* =========================
-   FEATURED BIRD
-========================= */
-
-.featured-bird {
-
-    overflow: hidden;
-
-    border-radius: 18px;
-
-    background: white;
-
-    box-shadow:
-        0 8px 24px rgba(0,0,0,.12);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-
-    cursor: pointer;
-}
-
-.featured-bird:hover {
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.16);
-}
-
-.featured-image-wrapper {
-
-    position: relative;
-}
-
-.featured-image-wrapper img {
-
-    width: 100%;
-
-    height: 280px;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-.featured-tag {
-
-    position: absolute;
-
-    top: 12px;
-
-    left: 12px;
-
-    background: rgba(20,83,45,.92);
-
-    color: white;
-
-    padding: .4rem .8rem;
-
-    border-radius: 999px;
-
-    font-size: .8rem;
-
-    font-weight: 600;
-
-    letter-spacing: .3px;
-}
-
-.featured-description {
-
-    margin-top: 1rem;
-
-    color: #374151;
-
-    line-height: 1.6;
-
-    font-size: .95rem;
-}
-
-.featured-btn {
-
-    margin-top: 1rem;
-
-    border: none;
-
-    border-radius: 10px;
-
-    padding: .7rem 1.2rem;
-
-    background: #14532d;
-
-    color: white;
-
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-.featured-btn:hover {
-
-    opacity: .9;
+        height: 220px;
+    }
 }
