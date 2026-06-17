@@ -5,7 +5,7 @@
     "assameseName": " দেও দৰিক",
     "iucnStatus": "LC",
     "description": "ID: 23-27 cm. Iridescent emerald-green wings/mantle with vinous-pink underparts and bright red bill. Assam Seasonality: Year-round common resident in dense wet evergreen forests (e.g., Garbhanga). Dimorphism: Male has a prominent white shoulder patch and white/grey eyebrow/forehead; female lacks white shoulder patch and is duller brown.",
-    "image": "placeholder.jpg"
+    "image": "images/birds/asian-emerald-dove.avif"
   },
   {
     "id": "asian-palm-swift",
@@ -61,7 +61,7 @@
     "assameseName": "ধোঁৱাবৰণীয়া ফেঁচু",
     "iucnStatus": "LC",
     "description": "ID: 25-35 cm. Glossy black plumage with a distinctively forked or modified tail. Assam Seasonality: Year-round resident; conspicuous perching on open branches. Dimorphism: Monomorphic; sexes are identical.",
-    "image": "placeholder.jpg"
+    "image": "images/birds/ashy-drongo.avif"
   },
   {
     "id": "ashy-woodswallow",
@@ -77,7 +77,7 @@
     "assameseName": "শামুকভঙা",
     "iucnStatus": "LC",
     "description": "ID: Variable size. Distinctive local avian species with regional field marks. Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "placeholder.jpg"
+    "image": "images/birds/asian-openbil.avif"
   },
   {
     "id": "ashy-headed-green-pigeon",
@@ -341,7 +341,7 @@
     "assameseName": "গাং শালিকা",
     "iucnStatus": "LC",
     "description": "ID: 20-25 cm. Robust, highly vocal omnivorous bird with sturdy yellow or pale legs. Assam Seasonality: Very common permanent resident across all habitats. Dimorphism: Sexes are identical.",
-    "image": "placeholder.jpg"
+    "image": "images/birds/bank-myna.avif"
   },
   {
     "id": "brown-headed-gull",
@@ -416,12 +416,12 @@
     "image": "placeholder.jpg"
   },
   {
-    "id": "baers-pochard",
+    "id": "baer's-pochard",
     "name": "Baers Pochard",
     "assameseName": "বৰ কলীমূৰী হাঁহ",
     "iucnStatus": "CR",
     "description": "ID: 35-70 cm. Aquatic waterfowl with webbed feet and a flattened bill. Assam Seasonality: Winter visitor (Oct-March) arriving at wetlands like Maguri Beel. Dimorphism: Strongly dimorphic in breeding season; males display bright ornamental plumage, females are cryptically mottled brown.",
-    "image": "placeholder.jpg"
+    "image": "images/birds/baer's-pochard.avif"
   },
   {
     "id": "barn-owl",
