@@ -1023,6 +1023,10 @@ body {
     margin-bottom: .75rem;
 }
 
+/* =========================
+   FOOTER PARTNERS
+========================= */
+
 .footer-partners h4 {
 
     margin-bottom: 1rem;
@@ -1036,20 +1040,25 @@ body {
 
     align-items: center;
 
-    gap: 1rem;
-
-    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .partner-logos img {
 
-    height: 60px;
+    max-height: 70px;
+
+    max-width: 180px;
 
     width: auto;
 
     object-fit: contain;
 
     transition: .2s ease;
+
+    filter:
+        drop-shadow(
+            0 2px 4px rgba(0,0,0,.15)
+        );
 }
 
 .partner-logos img:hover {
@@ -1060,7 +1069,7 @@ body {
 .footer-bottom {
 
     border-top:
-        1px solid rgba(255,255,255,.15);
+        1px solid rgba(255,255,255,.15););
 
     text-align: center;
 
@@ -1097,6 +1106,10 @@ body {
 .footer-brand p {
 
     margin: 0 auto;
+}
+    .partner-logos {
+
+    justify-content: center;
 }
     .partner-logos {
 
