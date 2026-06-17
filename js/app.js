@@ -55,12 +55,20 @@ async function loadBirds() {
 
         birds = await response.json();
 
-        filteredBirds = [...birds];
+birds.sort((a, b) =>
+    a.name.localeCompare(
+        b.name,
+        "en",
+        { sensitivity: "base" }
+    )
+);
 
-        updateStatistics();
-        renderBirdOfDay();
-        renderBirds(filteredBirds);
-        updateResultCount();
+filteredBirds = [...birds];
+
+updateStatistics();
+renderBirdOfDay();
+renderBirds(filteredBirds);
+updateResultCount();
 
     } catch (error) {
 
