@@ -528,7 +528,7 @@ searchInput.addEventListener(
                 const y =
                     searchInput.getBoundingClientRect().top +
                     window.pageYOffset -
-                    60;
+                    40;
 
                 window.scrollTo({
                     top: y,
