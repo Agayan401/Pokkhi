@@ -93,12 +93,14 @@ body {
 
 .hero {
 
-    height: 80vh;
+    min-height: 65vh;
+
+    height: 70vh;
 
     background:
         linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.45)
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.35)
         ),
         url("../images/hero.avif");
 
@@ -146,9 +148,9 @@ body {
 
 .hero-text {
 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 
-    max-width: 750px;
+    max-width: 620px;
 
     margin-top: 3rem;
 
@@ -165,7 +167,7 @@ body {
 
     width: 100%;
 
-    max-width: 650px;
+    max-width: 720px;
 
     margin: 0 auto;
 }
@@ -174,13 +176,13 @@ body {
 
     width: 100%;
 
-    padding: 18px 24px;
+    padding: 20px 28px;
 
     border: none;
 
     border-radius: 14px;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
 
     box-shadow:
         0 10px 30px rgba(0,0,0,.2);
