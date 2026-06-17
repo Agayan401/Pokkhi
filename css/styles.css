@@ -1031,9 +1031,16 @@ body {
 
     margin-bottom: 1rem;
 
-    font-size: 1.1rem;
-}
+    font-size: 1rem;
 
+    font-weight: 600;
+
+    opacity: .9;
+}
+.footer-partners {
+
+    text-align: center;
+}
 .partner-logos {
 
     display: flex;
