@@ -210,7 +210,7 @@ container.innerHTML = `
         <div class="featured-image-wrapper">
 
             <img
-                src="images/${bird.image}"
+                src="${bird.image}"
                 alt="${bird.name}"
                 onerror="this.src='images/placeholder.jpg'"
             >
@@ -290,7 +290,7 @@ function renderBirds(birdList) {
 
         card.innerHTML = `
             <img
-                src="images/${bird.image}"
+                src="${bird.image}"
                 alt="${bird.name}"
                 onerror="this.src='images/placeholder.jpg'"
             >
@@ -548,7 +548,7 @@ function openModal(bird) {
         );
 
     image.src =
-        `images/${bird.image}`;
+    bird.image;
 
     image.onerror = () => {
 
