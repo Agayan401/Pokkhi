@@ -1038,16 +1038,20 @@ body {
 
     display: flex;
 
+    justify-content: center;
+
     align-items: center;
 
-    gap: 1.5rem;
+    gap: 2rem;
+
+    flex-wrap: wrap;
 }
 
 .partner-logos img {
 
-    max-height: 70px;
+    max-height: 90px;
 
-    max-width: 180px;
+    max-width: 220px;
 
     width: auto;
 
