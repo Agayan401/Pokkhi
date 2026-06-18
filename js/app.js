@@ -569,7 +569,7 @@ directorySearchInput.addEventListener(
 
                     behavior: "smooth",
 
-                    block: "start"
+                    block: "center"
 
                 });
 
@@ -578,7 +578,7 @@ directorySearchInput.addEventListener(
         }
 
     }
-);;
+);
 }
 
 searchInput.addEventListener(
