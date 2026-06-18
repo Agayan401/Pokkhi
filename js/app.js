@@ -552,10 +552,15 @@ if (directorySearchInput) {
 
                 setTimeout(() => {
 
-                    directorySearchInput.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+                    const y =
+    directorySearchInput.getBoundingClientRect().top +
+    window.pageYOffset -
+    180;
+
+window.scrollTo({
+    top: y,
+    behavior: "smooth"
+});
 
                 }, 300);
 
