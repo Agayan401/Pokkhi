@@ -9,6 +9,10 @@ const directorySearchInput =
     );
 const statusFilter = document.getElementById("statusFilter");
 const suggestionsBox = document.getElementById("suggestions");
+const directorySuggestionsBox =
+    document.getElementById(
+        "directorySuggestions"
+    );
 const resetSearchBtn = document.getElementById("resetSearchBtn");
 
 const loadMoreBtn =
@@ -361,17 +365,15 @@ else {
         `Load More`;
 }
 }
-function showSuggestions(searchTerm) {
+function showSuggestions(searchTerm, targetBox, targetInput) {
 
-    if (!suggestionsBox) return;
+    if (!targetBox) return;
 
-    suggestionsBox.innerHTML = "";
+    targetBox.innerHTML = "";
 
     if (searchTerm.length < 2) {
 
-        suggestionsBox.style.display =
-            "none";
-
+        targetBox.style.display = "none";
         return;
     }
 
@@ -393,9 +395,7 @@ function showSuggestions(searchTerm) {
 
     if (!matches.length) {
 
-        suggestionsBox.style.display =
-            "none";
-
+        targetBox.style.display = "none";
         return;
     }
 
@@ -414,20 +414,20 @@ function showSuggestions(searchTerm) {
             "click",
             () => {
 
-                searchInput.value =
+                targetInput.value =
                     bird.name;
 
-                suggestionsBox.style.display =
+                targetBox.style.display =
                     "none";
 
-                performSearch();
+                filterBirds();
             }
         );
 
-        suggestionsBox.appendChild(item);
+        targetBox.appendChild(item);
     });
 
-    suggestionsBox.style.display =
+    targetBox.style.display =
         "block";
 }
 
@@ -509,7 +509,20 @@ function filterBirds() {
 
     updateResultCount();
 
-    showSuggestions(search);
+    showSuggestions(
+    heroSearch,
+    suggestionsBox,
+    searchInput
+);
+
+if (directorySearchInput) {
+
+    showSuggestions(
+        directorySearch,
+        directorySuggestionsBox,
+        directorySearchInput
+    );
+}
 }
 
 searchInput.addEventListener(
@@ -544,30 +557,28 @@ if (directorySearchInput) {
         filterBirds
     );
 
-    directorySearchInput.addEventListener(
-        "focus",
-        () => {
+directorySearchInput.addEventListener(
+    "focus",
+    () => {
 
-            if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 768) {
 
-                setTimeout(() => {
+            setTimeout(() => {
 
-                    const y =
-    directorySearchInput.getBoundingClientRect().top +
-    window.pageYOffset -
-    100;
+                directorySearchInput.scrollIntoView({
 
-window.scrollTo({
-    top: y,
-    behavior: "smooth"
-});
+                    behavior: "smooth",
 
-                }, 300);
+                    block: "start"
 
-            }
+                });
+
+            }, 500);
 
         }
-    );
+
+    }
+);;
 }
 
 searchInput.addEventListener(
@@ -703,8 +714,13 @@ document.addEventListener(
             )
         ) {
 
-            suggestionsBox.style.display =
-                "none";
+            suggestionsBox.style.display = "none";
+
+if (directorySuggestionsBox) {
+
+    directorySuggestionsBox.style.display =
+        "none";
+}
         }
     }
 );
