@@ -1448,3 +1448,80 @@ p {
     transform:
         translateY(-2px);
 }
+/* Anatomy Guide */
+
+.anatomy-page {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 3rem 2rem;
+}
+
+.anatomy-header {
+
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.anatomy-header h1 {
+
+    color: #145c2e;
+
+    margin-bottom: 1rem;
+}
+
+.anatomy-container {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 2rem;
+
+    align-items: start;
+}
+
+.bird-panel,
+.info-panel {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 2rem;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.bird-panel img {
+
+    width: 100%;
+
+    display: block;
+}
+
+.info-panel h2 {
+
+    color: #145c2e;
+
+    margin-bottom: 1rem;
+}
+
+.info-panel ul {
+
+    margin-top: 1rem;
+
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 900px) {
+
+    .anatomy-container {
+
+        grid-template-columns: 1fr;
+    }
+
+}
