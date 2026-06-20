@@ -1527,3 +1527,42 @@ p {
     }
 
 }
+.bird-wrapper {
+
+    position: relative;
+
+    width: fit-content;
+
+    margin: 0 auto;
+}
+
+.hotspot {
+
+    position: absolute;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: rgba(20,92,46,0.8);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.hotspot:hover {
+
+    transform: scale(1.2);
+
+    background: #1e7a3c;
+}
+
+.hotspot-bill {
+
+    left: 24%;
+
+    top: 33%;
+}
