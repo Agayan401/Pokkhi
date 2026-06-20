@@ -1475,30 +1475,28 @@ p {
 
 .anatomy-container {
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1.4fr 1fr;
+    flex-direction: column;
 
     gap: 2rem;
-
-    align-items: start;
 }
 
 .bird-panel,
 .info-panel {
 
-    background: white;
+    max-width: 1200px;
 
-    border-radius: 20px;
+    margin: 0 auto;
 
-    padding: 2rem;
-
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 100%;
 }
 
 .bird-panel img {
 
-    width: 85%;
+    width: 100%;
+
+    max-width: 1200px;
 
     display: block;
 
