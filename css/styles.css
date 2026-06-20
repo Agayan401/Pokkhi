@@ -1492,15 +1492,11 @@ p {
     width: 100%;
 }
 
-.bird-panel img {
+.bird-panel {
 
-    width: 100%;
+    text-align: center;
 
-    max-width: 1200px;
-
-    display: block;
-
-    margin: 0 auto;
+    overflow: visible;
 }
 
 .info-panel h2 {
