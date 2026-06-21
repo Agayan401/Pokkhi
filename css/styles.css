@@ -1495,30 +1495,29 @@ p {
 }
 
 .hotspot-bill {
-    top: 36%;
-    left: 28%;
+    left: 37%;
+    top: 43%;
 }
 
 .hotspot-crown {
-    top: 29%;
-    left: 40%;
+    left: 45%;
+    top: 32%;
 }
 
 .hotspot-supercilium {
+    left: 44%;
     top: 40%;
-    left: 34%;
 }
 
 .hotspot-throat {
-    top: 55%;
-    left: 40%;
+    left: 49%;
+    top: 56%;
 }
 
 .hotspot-wingbar {
-    top: 60%;
-    left: 58%;
+    left: 62%;
+    top: 57%;
 }
-
 /* ==========================================
    ANATOMY GUIDE
 ========================================== */
@@ -1609,9 +1608,9 @@ p {
 
     position: absolute;
 
-    width: 28px;
+    width: 24px;
 
-    height: 28px;
+    height: 24px;
 
     border-radius: 50%;
 
@@ -1625,7 +1624,7 @@ p {
 
     justify-content: center;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 700;
 
