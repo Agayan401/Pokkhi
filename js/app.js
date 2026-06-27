@@ -416,7 +416,7 @@ function updateStatistics() {
         document.getElementById("barCR").style.width = `${(cr / total) * 100}%`;
     }
 
-    document.getElementById("lastUpdated").textContent = "June 2025";
+    document.getElementById("lastUpdated").textContent = "27-June-2026";
 }
 
 function updateResultCount() {
