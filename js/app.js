@@ -56,7 +56,7 @@ function hideLoaderIfReady() {
             slideshowStarted = true;
             setTimeout(() => {
                 initHeroSlideshow();
-            }, 700);
+            }, 500);
         }
     }
 }
