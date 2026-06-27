@@ -203,7 +203,7 @@ function normalizeRoman(text) {
 
 function tokenize(text) {
     return normalizeRoman(normalizeQuery(text))
-        .replace(/[\/,()]/g, " ")
+        .replace(/[\/,()\-]/g, " ")
         .replace(/-/g, " ")
         .replace(/\s+/g, " ")
         .split(" ")
@@ -337,10 +337,17 @@ function findMatchingBirds(query) {
 }
 
 function highlightMatch(text, query) {
+
     if (!text || !query) return text;
-    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    const escaped = query
+        .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        .replace(/\s+/g, "[-\\s]+");
+
     const regex = new RegExp(`(${escaped})`, "ig");
+
     return text.replace(regex, '<span class="search-highlight">$1</span>');
+
 }
 
 function highlightRomanAssamese(text, query) {
@@ -532,17 +539,32 @@ function showSuggestions(searchTerm, targetBox, targetInput) {
     let matches = findMatchingBirds(searchTerm);
     const query = normalizeRoman(normalizeQuery(searchTerm));
 
-    matches.sort((a, b) => {
-        const aEnglish = normalizeRoman(a.name).includes(query);
-        const bEnglish = normalizeRoman(b.name).includes(query);
-        if (aEnglish !== bEnglish) return bEnglish - aEnglish;
+matches.sort((a, b) => {
 
-        const aStarts = normalizeRoman(a.name).startsWith(query);
-        const bStarts = normalizeRoman(b.name).startsWith(query);
-        if (aStarts !== bStarts) return bStarts - aStarts;
+    const normalizeName = name =>
+        normalizeRoman(name)
+            .replace(/-/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
 
-        return a.name.localeCompare(b.name, "en", { sensitivity: "base" });
-    });
+    const aName = normalizeName(a.name);
+    const bName = normalizeName(b.name);
+
+    const aEnglish = aName.includes(query);
+    const bEnglish = bName.includes(query);
+
+    if (aEnglish !== bEnglish)
+        return bEnglish - aEnglish;
+
+    const aStarts = aName.startsWith(query);
+    const bStarts = bName.startsWith(query);
+
+    if (aStarts !== bStarts)
+        return bStarts - aStarts;
+
+    return a.name.localeCompare(b.name, "en", { sensitivity: "base" });
+
+});
 
     matches = matches.slice(0, 5);
 
