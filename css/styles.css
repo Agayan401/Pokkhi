@@ -1465,20 +1465,20 @@ p {
     color: white;
 }
 
-.footer-content {
+.footer-content{
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
-    padding: 3rem 1rem;
+    padding:3rem 1rem;
 
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        2fr 1fr 1fr;
+        2fr 1fr 1fr 1fr;
 
-    gap: 3rem;
+    gap:3rem;
 }
 
 .footer-brand img {
