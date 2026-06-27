@@ -3023,3 +3023,25 @@ MOBILE
     }
 
 }
+
+/* ==========================================
+   IMAGE PROTECTION
+========================================== */
+
+.hero-logo,
+.loader-logo,
+.footer-brand img,
+.partner-logos img,
+.team-modal-content img,
+.featured-image-wrapper img,
+.bird-image img,
+.modal-image-main,
+.modal-image-blur{
+
+    -webkit-user-drag: none;
+
+    -webkit-touch-callout: none;
+
+    user-select: none;
+
+}
