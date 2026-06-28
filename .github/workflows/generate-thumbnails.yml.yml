@@ -1,0 +1,44 @@
+name: Generate Bird Thumbnails
+
+on:
+  push:
+    paths:
+      - 'images/birds/**'
+      - 'scripts/generate-thumbnails.js'
+      - 'package.json'
+
+jobs:
+  thumbnails:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate thumbnails
+        run: npm run thumbnails
+
+      - name: Commit updated thumbnails
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add images/birds/cards
+
+          if git diff --cached --quiet; then
+            echo "No thumbnail changes."
+          else
+            git commit -m "Auto-update bird thumbnails"
+            git push
+          fi
