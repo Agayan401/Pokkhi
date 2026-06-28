@@ -5,7 +5,8 @@
 let animationFinished = false;
 let birdsLoaded = false;
 let heroImagesLoaded = false;
-let slideshowStarted = false;
+let slideshowInterval = null;
+
 
 const loaderSteps = [
     { action: "Exploring...", place: "The Forests of Assam" },
@@ -51,11 +52,6 @@ function hideLoaderIfReady() {
         if (!window.location.hash) {
             window.scrollTo(0, 0);
         }
-
-        if (!slideshowStarted) {
-    slideshowStarted = true;
-    initHeroSlideshow();
-}
     }
 }
 
@@ -963,24 +959,41 @@ function isMobileView() {
 }
 
 function initHeroSlideshow() {
+   const container = document.getElementById("heroSlideshow");
+
+   if (container.children.length > 0) return;
     const slideshow = document.getElementById("heroSlideshow");
     if (!slideshow) return;
 
-    heroImages.forEach((image) => {
+    heroImages.forEach((image, index) => {
         const slide = document.createElement("div");
         slide.className = "hero-slide";
         const imagePath = isMobileView() ? image.mobile : image.desktop;
         slide.style.backgroundImage = `url("${imagePath}")`;
-        slideshow.appendChild(slide);
-    });
+       if (index === 0) {
+    slide.style.opacity = "0.001";
+}
+
+slideshow.appendChild(slide);
+});
+
+
 
     const slides = slideshow.querySelectorAll(".hero-slide");
     if (slides.length > 0) {
         slides[0].classList.add("active");
+
+requestAnimationFrame(() => {
+    slides[0].style.opacity = "";
+});
     }
 
     let current = 0;
-    setInterval(() => {
+    if (slideshowInterval) {
+    clearInterval(slideshowInterval);
+}
+
+slideshowInterval = setInterval(() => {
         slides[current].classList.remove("active");
         current = (current + 1) % slides.length;
         slides[current].classList.add("active");
@@ -1007,20 +1020,29 @@ if (sessionStorage.getItem("loaderShown")) {
 
     initHeroSlideshow();
 
+    loadBirds();
+
 } else {
 
     sessionStorage.setItem("loaderShown", "true");
 
-    startLoaderAnimation();
+    // Build the slideshow immediately
+initHeroSlideshow();
 
-    preloadHeroImages().then(() => {
-        heroImagesLoaded = true;
-        hideLoaderIfReady();
-    });
+
+// Then preload the images
+preloadHeroImages().then(() => {
+    heroImagesLoaded = true;
+    hideLoaderIfReady();
+});
+
+// Start the loader animation
+startLoaderAnimation();
+
+loadBirds();
 
 }
 
-loadBirds();
 });
 
 /* ==========================================
