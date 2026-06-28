@@ -8,11 +8,11 @@ let heroImagesLoaded = false;
 let slideshowStarted = false;
 
 const loaderSteps = [
-    { action: "Exploring...", place: "the forests of Assam" },
-    { action: "Scanning...", place: "the wetlands of Assam" },
-    { action: "Listening...", place: "the grasslands of Assam" },
-    { action: "Discovering...", place: "the tea gardens of Assam" },
-    { action: "Identifying...", place: "the birds of Assam" },
+    { action: "Exploring...", place: "The Forests of Assam" },
+    { action: "Scanning...", place: "The Wetlands of Assam" },
+    { action: "Listening...", place: "The Grasslands of Assam" },
+    { action: "Discovering...", place: "The Tea Gardens of Assam" },
+    { action: "Identifying...", place: "The Birds of Assam" },
     { action: " ", place: "Welcome to Pokkhi." }
 ];
 
