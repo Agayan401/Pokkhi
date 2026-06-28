@@ -47,6 +47,7 @@ function hideLoaderIfReady() {
 
         const loader = document.getElementById("loader");
         loader.classList.add("loader-hidden");
+        startHeroSlideshow();
 
         // Always start from the top
         if (!window.location.hash) {
@@ -988,16 +989,30 @@ requestAnimationFrame(() => {
 });
     }
 
-    let current = 0;
-    if (slideshowInterval) {
-    clearInterval(slideshowInterval);
+    
 }
+function startHeroSlideshow() {
 
-slideshowInterval = setInterval(() => {
+    const slides = document.querySelectorAll(".hero-slide");
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    if (slideshowInterval) {
+        clearInterval(slideshowInterval);
+    }
+
+    slideshowInterval = setInterval(() => {
+
         slides[current].classList.remove("active");
+
         current = (current + 1) % slides.length;
+
         slides[current].classList.add("active");
+
     }, 5000);
+
 }
 
 function updateHeroImagePositions() {
@@ -1020,7 +1035,9 @@ if (sessionStorage.getItem("loaderShown")) {
 
     initHeroSlideshow();
 
-    loadBirds();
+startHeroSlideshow();
+
+loadBirds();
 
 } else {
 
