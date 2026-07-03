@@ -128,6 +128,14 @@
     "image": "images/birds/asian-green-bee-eater.avif"
   },
   {
+    "id": "australasian-grass-owl",
+    "name": "Australasian Grass-Owl",
+    "assameseName": "মউলূ-ফেঁচা",
+    "iucnStatus": "LC",
+    "description": "Assam Seasonality: Resident, though notoriously secretive. They inhabit tall, wet grasslands (such as those around Kaziranga or Maguri Beel) year-round but are primarily nocturnal and rarely flush during the day. The size of the bird is 32–42 cm with a wingspan over 100 cm. It features a classic Tyto heart-shaped facial disk, distinct black "tear marks" below small eyes, and long, feathered legs. The upperparts are dark brown with pale spots. Male vs. Female: Sexually dimorphic. Males have a clean, white facial disc. Females have a pale orange-buff facial disc with dark spots and are noticeably larger.",
+    "image": "images/birds/australasian-grass-owl.avif"
+  },
+  {
     "id": "barred-buttonquail",
     "name": "Barred Buttonquail",
     "assameseName": "বতাহ চৰাই",
@@ -150,6 +158,14 @@
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident in Assam's diverse floodplains and forest layers. The size of the bird is 24-26  cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
     "image": "images/birds/black-hooded-oriole.avif"
+  },
+  {
+    "id": "black-necked-crane",
+    "name": "Black-necked Crane",
+    "assameseName": "দেও কৰ্চন",
+    "iucnStatus": "NT",
+    "description": "Assam Seasonality: Rare winter visitor. They breed in high-altitude Tibetan plateaus and descend to lower valleys during the winter (typically November to February). While they primarily winter in neighboring Arunachal Pradesh, they are occasionally documented in upper Assam plains during peak winter. The size of the bird is 139 cm tall with a massive 235 cm wingspan. The body plumage is pale gray to whitish, which contrasts sharply with a completely black head, upper neck, and black legs. It also features a bare, bright red crown patch and a small white patch just behind the eye. Male vs. Female: Plumage is identical between the sexes, but the male is slightly larger than the female.",
+    "image": "images/birds/black-necked-crane.avif"
   },
   {
     "id": "black-naped-monarch",
@@ -1424,6 +1440,14 @@
     "image": "images/birds/greater-necklaced-laughingthrush.avif"
   },
   {
+    "id": "great-thick-knee",
+    "name": "Great Thick-knee",
+    "assameseName": "শিল-খোচৰা",
+    "iucnStatus": "NT",
+    "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains, typically patrolling the sandy and rocky banks of major river systems like the Brahmaputra. The size of the bird is 49–55 cm. It has grayish-sandy brown upperparts and a massive, slightly upturned black bill with a yellow base. Look for the prominent white patch encircling the eye — contrasted against black ear-coverts, it gives the bird a distinct "spectacled" appearance. Male vs. Female:Monomorphic. Both sexes share the same plumage and size.",
+    "image": "images/birds/great-thick-knee.avif"
+  },
+  {
     "id": "great-white-pelican",
     "name": "Great White Pelican",
     "assameseName": "বৰ বগী ভেলা",
@@ -1582,6 +1606,14 @@
     "iucnStatus": "NT",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse grasslands. The size of the bird is 16-18 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
     "image": "images/birds/indian-grassbird.avif"
+  },
+    {
+    "id": "indian-thick-knee",
+    "name": "Indian Thick-knee",
+    "assameseName": "বন-খোচৰা",
+    "iucnStatus": "LC",
+    "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. Recent eBird records confirm successful nesting in protected areas like Raimona National Park. The size of the bird is 40-45 cm. It features striking, large yellow eyes and a short, stout black bill with a yellow base. Its plumage is sandy-brown with heavy dark streaking, providing excellent camouflage against dry soils, rocks, and scrubland. Male vs. Female:Monomorphic. Males and females look identical in the field.",
+    "image": "images/birds/indian-thick-knee.avif"
   },
   {
     "id": "jerdon-s-bushchat",
