@@ -1452,7 +1452,73 @@ p {
 
     font-weight: 600;
 }
+.approved-btn{
 
+    margin-top:18px;
+
+    width:100%;
+
+    padding:14px;
+
+    background:#ffffff;
+
+    border:2px solid #0b5d34;
+
+    color:#0b5d34;
+
+    font-weight:600;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.approved-btn:hover{
+
+    background:#0b5d34;
+
+    color:white;
+}
+.approved-modal{
+
+    max-width:700px;
+
+    max-height:80vh;
+
+    overflow-y:auto;
+}
+.approved-note{
+
+    background:#eef8f1;
+
+    border-left:4px solid #0b5d34;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+}
+.contribution-entry{
+
+    padding:18px 0;
+
+    border-bottom:1px solid #e5e5e5;
+}
+
+.contribution-entry h4{
+
+    margin-bottom:6px;
+}
+
+.contribution-entry p{
+
+    margin:4px 0;
+}
 /* =========================
    FOOTER
 ========================= */
