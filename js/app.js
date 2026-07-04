@@ -1236,3 +1236,28 @@ document.addEventListener("dragstart", (e) => {
     }
 
 });
+/* ==========================================
+   APPROVED CONTRIBUTIONS MODAL
+========================================== */
+
+const approvedBtn = document.getElementById("approvedContributionsBtn");
+const approvedModal = document.getElementById("approvedModal");
+const closeApprovedModal = document.getElementById("closeApprovedModal");
+
+if (approvedBtn && approvedModal && closeApprovedModal) {
+
+    approvedBtn.addEventListener("click", () => {
+        approvedModal.style.display = "flex";
+    });
+
+    closeApprovedModal.addEventListener("click", () => {
+        approvedModal.style.display = "none";
+    });
+
+    approvedModal.addEventListener("click", (event) => {
+        if (event.target === approvedModal) {
+            approvedModal.style.display = "none";
+        }
+    });
+
+}
