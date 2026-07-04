@@ -1483,13 +1483,27 @@ p {
 }
 .approved-modal{
 
-    max-width:700px;
+    width:min(760px,95vw);
 
-    max-height:80vh;
+    max-height:85vh;
+
+    padding:32px;
 
     overflow-y:auto;
+
+}.approved-modal h2{
+
+    color:#14532d;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
 }
+
 .approved-note{
+
+    text-align:left;
 
     background:#eef8f1;
 
@@ -1505,19 +1519,59 @@ p {
 }
 .contribution-entry{
 
-    padding:18px 0;
+    padding:22px;
 
-    border-bottom:1px solid #e5e5e5;
+    margin-bottom:18px;
+
+    background:#fafafa;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    transition:.2s;
+}
+
+.contribution-entry:hover{
+
+    background:white;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+}
+
+.contribution-entry:last-child{
+
+    margin-bottom:0;
+
 }
 
 .contribution-entry h4{
 
-    margin-bottom:6px;
+    color:#14532d;
+
+    font-size:1.15rem;
+
+    margin-bottom:14px;
+
 }
 
 .contribution-entry p{
 
-    margin:4px 0;
+    margin:8px 0;
+
+    line-height:1.6;
+
+}
+
+.contribution-entry strong{
+
+    display:inline-block;
+
+    width:150px;
+
+    color:#374151;
+
 }
 /* =========================
    FOOTER
