@@ -1491,6 +1491,8 @@ p {
 
     overflow-y:auto;
 
+    position:relative;
+
 }.approved-modal h2{
 
     color:#14532d;
@@ -1518,6 +1520,39 @@ p {
     line-height:1.7;
 
     text-align:left;
+
+}
+#closeApprovedModal{
+
+    position:absolute;
+
+    top:18px;
+
+    left:20px;
+
+    right:auto;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    color:#14532d;
+
+    cursor:pointer;
+
+    line-height:1;
+
+    transition:0.2s;
+
+    z-index:10;
+
+}
+
+#closeApprovedModal:hover{
+
+    color:#0b5d34;
+
+    transform:scale(1.15);
 
 }
 .contribution-entry{
