@@ -3149,12 +3149,13 @@ MOBILE
 
 }
 /* ==========================================
-   LEGAL PAGE
+   Information PAGE
 ========================================== */
 
+#sources,
+#disclaimer,
 #privacy,
 #terms,
-#disclaimer,
 #contact{
 
     max-width:900px;
@@ -3165,9 +3166,10 @@ MOBILE
 
 }
 
+#sources h2,
+#disclaimer h2,
 #privacy h2,
 #terms h2,
-#disclaimer h2,
 #contact h2{
 
     color:#14532d;
@@ -3176,9 +3178,10 @@ MOBILE
 
 }
 
+#sources p,
+#disclaimer p,
 #privacy p,
 #terms p,
-#disclaimer p,
 #contact p{
 
     line-height:1.9;
@@ -3186,33 +3189,62 @@ MOBILE
     color:#374151;
 
 }
+
+#sources h3{
+
+    margin:2rem 0 .8rem;
+
+    color:#14532d;
+
+    font-size:1.2rem;
+
+}
+
+#sources ul{
+
+    margin-left:1.5rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+#sources li{
+
+    margin-bottom:.55rem;
+
+    line-height:1.8;
+
+}
 /* ==========================
-   LEGAL PAGE MOBILE FIX
+   INFORMATION PAGE MOBILE FIX
 ========================== */
 
 @media (max-width: 768px) {
 
+    #sources,
+    #disclaimer,
     #privacy,
     #terms,
-    #disclaimer,
     #contact {
 
         padding: 1.5rem 0;
 
     }
 
+    #sources h2,
+    #disclaimer h2,
     #privacy h2,
     #terms h2,
-    #disclaimer h2,
     #contact h2 {
 
         font-size: 1.5rem;
 
     }
 
+    #sources p,
+    #disclaimer p,
     #privacy p,
     #terms p,
-    #disclaimer p,
     #contact p {
 
         font-size: 1rem;
