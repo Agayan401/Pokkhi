@@ -23,18 +23,6 @@ const files = fs.readdirSync(sourceDir);
         const input = path.join(sourceDir, file);
         const output = path.join(outputDir, file);
 
-        // Skip if thumbnail is newer than original
-        if (fs.existsSync(output)) {
-
-            const sourceTime = fs.statSync(input).mtimeMs;
-            const thumbTime = fs.statSync(output).mtimeMs;
-
-            if (thumbTime >= sourceTime) {
-                console.log(`✓ Skipped ${file}`);
-                skipped++;
-                continue;
-            }
-        }
 
         console.log(`Generating ${file}`);
 
