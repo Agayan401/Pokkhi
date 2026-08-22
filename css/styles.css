@@ -1222,6 +1222,33 @@ p {
     font-size: 1.05rem;
 }
 
+#modalEbird {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-top: 1.5rem;
+    padding: .7rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #14532d;
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+#modalEbird:hover {
+    background: #dcfce7;
+    border-color: #86efac;
+    transform: translateY(-1px);
+}
+
+#modalEbird:focus-visible {
+    outline: 3px solid rgba(20,83,45,.2);
+    outline-offset: 2px;
+}
+
 #closeModal {
 
     position: absolute;
