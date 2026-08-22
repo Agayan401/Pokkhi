@@ -2823,7 +2823,7 @@
     "id": "masked-finfoot",
     "name": "Masked Finfoot",
     "assameseName": "বন ঢেকৰ",
-    "iucnStatus": "EN",
+    "iucnStatus": "CR",
     "description": "Assam Seasonality: Rare/uncommon. The size of the bird is 54-61 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
     "image": "images/birds/masked-finfoot.avif",
     "ebird": {
@@ -3878,7 +3878,7 @@
   {
     "id": "slaty-bellied-tesia",
     "name": "Slaty-bellied Tesia",
-    "assameseName": "মাটি চটচটী, মাটি ধেপেচি",
+    "assameseName": "মাটি চটচটী / মাটি ধেপেচি",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Altitudinal migrant; breeds in high montane forests, descending to foothills and damp ravines in winter. The size of the bird is 8-10 cm. Tiny, almost tail-less forest bird with bright olive-green upperparts and a dark slaty-grey belly. Dimorphism: Males have a striking golden-yellow crown; females have an olive-green crown matching the back.",
     "image": "images/birds/slaty-bellied-tesia.avif",
