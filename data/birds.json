@@ -2832,12 +2832,12 @@
     }
   },
   {
-    "id": "marsh-sandpipier",
-    "name": "Marsh Sandpipier",
+    "id": "marsh-sandpiper",
+    "name": "Marsh Sandpiper",
     "assameseName": "বোকাপানী খোঁচৰা / লৰীয়তী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 22-26 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/marsh-sandpipier.avif",
+    "image": "images/birds/marsh-sandpiper.avif",
     "ebird": {
       "speciesCode": "marsan",
       "url": "https://ebird.org/species/marsan"
