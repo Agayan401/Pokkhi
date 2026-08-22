@@ -974,7 +974,7 @@
   {
     "id": "common-hawk-cuckoo",
     "name": "Common Hawk Cuckoo",
-    "assameseName": "শেন কুলি, শেন সজীয়া কেতেকী",
+    "assameseName": "শেন কুলি / শেন সজীয়া কেতেকী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Common year-round resident/local migrant in wooded habitats, known for its loud 'brain-fever' call. The size of the bird is 30-34 cm. Medium cuckoo mimicking a Shikra hawk; grey upperparts, rufous/brown streaked and barred underparts. Dimorphism: Monomorphic; sexes identical, heavily relying on raptor mimicry.",
     "image": "images/birds/common-hawk-cuckoo.avif",
@@ -1262,7 +1262,7 @@
   {
     "id": "chestnut-winged-cuckoo",
     "name": "Chestnut-winged Cuckoo",
-    "assameseName": "সুন্দৰী কুলি, বন পিয়লী চৰাই",
+    "assameseName": "সুন্দৰী কুলি / বন পিয়লী চৰাই",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Summer breeding migrant (Apr-Sep) favoring scrub jungles and deciduous forest edges. The size of the bird is 39-47 cm. Striking crested cuckoo with a glossy black head, chestnut wings, and white half-collar. Dimorphism: Monomorphic; sexes are identical in size and plumage.",
     "image": "images/birds/chestnut-winged-cuckoo.avif",
