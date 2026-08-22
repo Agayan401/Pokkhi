@@ -776,7 +776,24 @@ function openModal(bird) {
     modalStatus.textContent = `IUCN Status: ${bird.iucnStatus || ""}`;
     modalStatus.className = `status-badge ${getStatusClass(bird.iucnStatus)}`;
     document.getElementById("modalDescription").textContent = bird.description || "";
-    document.getElementById("birdModal").style.display = "flex";
+
+const modalEbird = document.getElementById("modalEbird");
+
+if (modalEbird) {
+    if (bird.ebird && bird.ebird.url) {
+        modalEbird.href = bird.ebird.url;
+        modalEbird.style.display = "inline-flex";
+        modalEbird.setAttribute(
+            "aria-label",
+            `View ${bird.name || "this species"} on eBird`
+        );
+    } else {
+        modalEbird.removeAttribute("href");
+        modalEbird.style.display = "none";
+    }
+}
+
+document.getElementById("birdModal").style.display = "flex";
 }
 
 const closeModalBtn = document.getElementById("closeModal");
