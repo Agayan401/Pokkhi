@@ -797,10 +797,45 @@ document.getElementById("birdModal").style.display = "flex";
 }
 
 const closeModalBtn = document.getElementById("closeModal");
+const birdModal = document.getElementById("birdModal");
+
+function closeBirdModal() {
+    birdModal.style.display = "none";
+}
+
 if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", () => {
-        document.getElementById("birdModal").style.display = "none";
-    });
+    closeModalBtn.addEventListener("click", closeBirdModal);
+}
+
+// Close the bird details on a horizontal swipe.
+let touchStartX = 0;
+let touchStartY = 0;
+
+if (birdModal) {
+    birdModal.addEventListener("touchstart", (event) => {
+        if (event.touches.length !== 1) return;
+
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+
+    birdModal.addEventListener("touchend", (event) => {
+        if (event.changedTouches.length !== 1) return;
+
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        // Horizontal swipe: close the modal.
+        if (
+            Math.abs(deltaX) >= 60 &&
+            Math.abs(deltaX) > Math.abs(deltaY)
+        ) {
+            closeBirdModal();
+        }
+    }, { passive: true });
 }
 
 window.addEventListener("click", event => {
