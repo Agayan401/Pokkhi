@@ -794,55 +794,152 @@ if (modalEbird) {
 }
 
 document.getElementById("birdModal").style.display = "flex";
+
+// Add a temporary history entry while the bird details are open.
+// This allows the mobile browser's back/swipe gesture to close
+// the modal instead of leaving Pokkhi.
+if (!history.state || !history.state.pokkhiModal) {
+    history.pushState(
+        { pokkhiModal: true },
+        "",
+        window.location.href
+    );
+}
 }
 
 const closeModalBtn = document.getElementById("closeModal");
 const birdModal = document.getElementById("birdModal");
 
-function closeBirdModal() {
+function closeBirdModal(fromHistory = false) {
+
+    if (!birdModal) return;
+
     birdModal.style.display = "none";
+
+    // If the modal was closed normally using X or a swipe,
+    // remove the temporary history entry.
+    if (!fromHistory && history.state && history.state.pokkhiModal) {
+        history.back();
+    }
 }
+
+
+/* ==========================================
+   CLOSE BUTTON
+   ========================================== */
 
 if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", closeBirdModal);
+    closeModalBtn.addEventListener("click", () => {
+        closeBirdModal();
+    });
 }
 
-// Close the bird details on a horizontal swipe.
+
+/* ==========================================
+   MOBILE SWIPE TO CLOSE
+   ========================================== */
+
 let touchStartX = 0;
 let touchStartY = 0;
+let horizontalSwipe = false;
 
 if (birdModal) {
-    birdModal.addEventListener("touchstart", (event) => {
+
+    birdModal.addEventListener("touchstart", event => {
+
         if (event.touches.length !== 1) return;
 
         touchStartX = event.touches[0].clientX;
         touchStartY = event.touches[0].clientY;
+        horizontalSwipe = false;
+
     }, { passive: true });
 
-    birdModal.addEventListener("touchend", (event) => {
-        if (event.changedTouches.length !== 1) return;
 
-        const touchEndX = event.changedTouches[0].clientX;
-        const touchEndY = event.changedTouches[0].clientY;
+    birdModal.addEventListener("touchmove", event => {
 
-        const deltaX = touchEndX - touchStartX;
-        const deltaY = touchEndY - touchStartY;
+        if (event.touches.length !== 1) return;
 
-        // Horizontal swipe: close the modal.
+        const currentX = event.touches[0].clientX;
+        const currentY = event.touches[0].clientY;
+
+        const deltaX = currentX - touchStartX;
+        const deltaY = currentY - touchStartY;
+
+
+        /*
+         * Detect horizontal movement early.
+         *
+         * This is important because waiting until touchend
+         * allows some mobile browsers to begin their own
+         * back/forward navigation gesture.
+         */
+
         if (
-            Math.abs(deltaX) >= 60 &&
+            Math.abs(deltaX) > 15 &&
             Math.abs(deltaX) > Math.abs(deltaY)
         ) {
+
+            horizontalSwipe = true;
+
+            event.preventDefault();
+        }
+
+    }, { passive: false });
+
+
+    birdModal.addEventListener("touchend", event => {
+
+        if (!horizontalSwipe) return;
+
+        const touchEndX = event.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+
+
+        /*
+         * Left or right swipe.
+         */
+
+        if (Math.abs(deltaX) >= 60) {
             closeBirdModal();
         }
+
+        horizontalSwipe = false;
+
     }, { passive: true });
 }
 
-window.addEventListener("click", event => {
-    const modal = document.getElementById("birdModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
+
+/* ==========================================
+   MOBILE BACK / SWIPE-BACK HANDLING
+   ========================================== */
+
+window.addEventListener("popstate", event => {
+
+    if (
+        birdModal &&
+        birdModal.style.display === "flex"
+    ) {
+
+        // Browser back/swipe gesture:
+        // close the modal instead of leaving Pokkhi.
+        closeBirdModal(true);
+
     }
+
+});
+
+
+/* ==========================================
+   CLICK OUTSIDE MODAL
+   ========================================== */
+
+window.addEventListener("click", event => {
+
+    if (event.target === birdModal) {
+        closeBirdModal();
+    }
+
 });
 
 document.addEventListener("click", event => {
