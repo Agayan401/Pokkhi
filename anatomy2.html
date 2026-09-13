@@ -57,28 +57,177 @@
         <div class="anatomy-container">
             <div class="anatomy-layout">
                 <div class="bird-panel">
-                    <div class="image-container">
-                        <img src="images/bird-anatomy-labelled.webp" alt="Bird Anatomy Diagram">
 
-                        <button class="anatomy-label" style="top:25.7%;left:25.8%;" data-part="Bill">Bill</button>
-                        <button class="anatomy-label" style="top:18.1%;left:33.8%;" data-part="Chin">Chin</button>
-                        <button class="anatomy-label" style="top:11.2%;left:43.4%;" data-part="Lore">Lore</button>
-                        <button class="anatomy-label" style="top:34%;left:23.3%;" data-part="Eye Ring">Eye Ring</button>
-                        <button class="anatomy-label" style="top:42.5%;left:26.6%;" data-part="Throat">Throat</button>
-                        <button class="anatomy-label" style="top:49.7%;left:36.9%;" data-part="Breast">Breast</button>
-                        <button class="anatomy-label" style="top:65.1%;left:43.5%;" data-part="Belly">Belly</button>
-                        <button class="anatomy-label" style="top:75%;left:53.7%;" data-part="Tarsus">Tarsus</button>
-                        <button class="anatomy-label" style="top:84%;left:62.8%;" data-part="Toe">Toe</button>
-                        <button class="anatomy-label" style="top:3.5%;left:51.9%;" data-part="Supercilium">Supercilium</button>
-                        <button class="anatomy-label" style="top:12.1%;left:65.9%;" data-part="Crest">Crest</button>
-                        <button class="anatomy-label" style="top:22.8%;left:74%;" data-part="Nape">Nape</button>
-                        <button class="anatomy-label" style="top:34.1%;left:80%;" data-part="Wing Bars">Wing Bars</button>
-                        <button class="anatomy-label" style="top:45.3%;left:89%;" data-part="Vent">Vent</button>
-                        <button class="anatomy-label" style="top:56%;left:92.7%;" data-part="Rump">Rump</button>
-                        <button class="anatomy-label" style="top:73.3%;left:76.4%;" data-part="Claw">Claw</button>
-                        <button class="anatomy-label" style="top:78%;left:94.2%;" data-part="Tail">Tail</button>
-                    </div>
+    <div class="diagram-window">
+
+        <div class="diagram-track" id="diagramTrack">
+
+            <!-- =========================================
+                 SLIDE 1 — EXISTING FEATURES
+                 ========================================= -->
+            <div class="anatomy-slide">
+
+                <div class="image-container">
+
+                    <img src="images/bird-anatomy-labelled.webp"
+                         alt="Bird Anatomy Diagram">
+
+                    <!-- EXISTING LABELS — DO NOT CHANGE POSITIONS -->
+                    <button class="anatomy-label"
+                        style="top:25.7%;left:25.8%;"
+                        data-part="Bill">Bill</button>
+
+                    <button class="anatomy-label"
+                        style="top:18.1%;left:33.8%;"
+                        data-part="Chin">Chin</button>
+
+                    <button class="anatomy-label"
+                        style="top:11.2%;left:43.4%;"
+                        data-part="Lore">Lore</button>
+
+                    <button class="anatomy-label"
+                        style="top:34%;left:23.3%;"
+                        data-part="Eye Ring">Eye Ring</button>
+
+                    <button class="anatomy-label"
+                        style="top:42.5%;left:26.6%;"
+                        data-part="Throat">Throat</button>
+
+                    <button class="anatomy-label"
+                        style="top:49.7%;left:36.9%;"
+                        data-part="Breast">Breast</button>
+
+                    <button class="anatomy-label"
+                        style="top:65.1%;left:43.5%;"
+                        data-part="Belly">Belly</button>
+
+                    <button class="anatomy-label"
+                        style="top:75%;left:53.7%;"
+                        data-part="Tarsus">Tarsus</button>
+
+                    <button class="anatomy-label"
+                        style="top:84%;left:62.8%;"
+                        data-part="Toe">Toe</button>
+
+                    <button class="anatomy-label"
+                        style="top:3.5%;left:51.9%;"
+                        data-part="Supercilium">Supercilium</button>
+
+                    <button class="anatomy-label"
+                        style="top:12.1%;left:65.9%;"
+                        data-part="Crest">Crest</button>
+
+                    <button class="anatomy-label"
+                        style="top:22.8%;left:74%;"
+                        data-part="Nape">Nape</button>
+
+                    <button class="anatomy-label"
+                        style="top:34.1%;left:80%;"
+                        data-part="Wing Bars">Wing Bars</button>
+
+                    <button class="anatomy-label"
+                        style="top:45.3%;left:89%;"
+                        data-part="Vent">Vent</button>
+
+                    <button class="anatomy-label"
+                        style="top:56%;left:92.7%;"
+                        data-part="Rump">Rump</button>
+
+                    <button class="anatomy-label"
+                        style="top:73.3%;left:76.4%;"
+                        data-part="Claw">Claw</button>
+
+                    <button class="anatomy-label"
+                        style="top:78%;left:94.2%;"
+                        data-part="Tail">Tail</button>
+
                 </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 SLIDE 2 — ADDITIONAL FEATURES
+                 ========================================= -->
+            <div class="anatomy-slide">
+
+                <div class="image-container">
+
+                    <img src="images/bird-anatomy-labelled.webp"
+                         alt="Bird Anatomy Diagram">
+
+                    <!-- NEW LABELS -->
+
+                    <button class="anatomy-label"
+                        style="top:8%;left:45%;"
+                        data-part="Crown">Crown</button>
+
+                    <button class="anatomy-label"
+                        style="top:25%;left:20%;"
+                        data-part="Cheek">Cheek</button>
+
+                    <button class="anatomy-label"
+                        style="top:18%;left:70%;"
+                        data-part="Neck">Neck</button>
+
+                    <button class="anatomy-label"
+                        style="top:42%;left:75%;"
+                        data-part="Back">Back</button>
+
+                    <button class="anatomy-label"
+                        style="top:38%;left:60%;"
+                        data-part="Scapulars">Scapulars</button>
+
+                    <button class="anatomy-label"
+                        style="top:48%;left:82%;"
+                        data-part="Wing Coverts">Wing Coverts</button>
+
+                    <button class="anatomy-label"
+                        style="top:52%;left:25%;"
+                        data-part="Side">Side</button>
+
+                    <button class="anatomy-label"
+                        style="top:62%;left:28%;"
+                        data-part="Flank">Flank</button>
+
+                    <button class="anatomy-label"
+                        style="top:62%;left:78%;"
+                        data-part="Upper Tail Coverts">Upper Tail Coverts</button>
+
+                    <button class="anatomy-label"
+                        style="top:75%;left:62%;"
+                        data-part="Leg">Leg</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE CONTROL -->
+
+    <div class="anatomy-switch">
+
+        <button id="anatomySwitch"
+                type="button"
+                aria-label="Explore other features">
+
+            <span id="anatomySwitchText">
+                Explore other features
+            </span>
+
+            <span id="anatomySwitchArrow">
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+</div>
 
                 <div class="info-panel" id="infoPanel">
                     <h2>How to Use This Guide</h2>
