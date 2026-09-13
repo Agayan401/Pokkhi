@@ -456,7 +456,27 @@ const excludedBirds = new Set([
     "mountain-imperial-pigeon", "mountain-scops-owl", "orange-breasted-green-pigeon", "oriental-bay-owl", "oriental-hobby",
     "pin-tailed-snipe", "red-avadavat", "rufous-bellied-eagle", "sarus-crane", "slaty-legged-crake", "slender-billed-babbler",
     "slender-billed-vulture", "steppe-eagle", "striated-bulbul", "swamp-grass-babbler", "thick-billed-warbler",
-    "tickell-s-leaf-warbler", "white-rumped-vulture", "white-spectacled-warbler", "yellow-eyed-warbler"
+    "tickell-s-leaf-warbler", "white-rumped-vulture", "white-spectacled-warbler", "yellow-eyed-warbler","asian-house-martin",
+"australasian-grass-owl",
+"bar-tailed-godwit",
+"black-throated-thrush",
+"blue-fronted-redstart",
+"bristled-grassbird",
+"common-rosefinch",
+"eared-grebe",
+"finn-s-warbler",
+"golden-warbler",
+"great-eared-nightjar",
+"hill-partridge",
+"hodgson's-frogmouth",
+"house-swift",
+"indian-vulture",
+"large-hawk-cuckoo",
+"large-niltava",
+"large-scimiter-babbler",
+"mountain-bulbul",
+"short-eared-owl",
+"wood-snipe"
 ]);
 
 function renderBirdOfDay() {
