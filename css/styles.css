@@ -1164,6 +1164,8 @@ p {
     padding: 2.5rem;
 
     overflow-y: auto;
+
+    min-height: 0;
 }
 
 #modalName {
