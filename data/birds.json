@@ -4560,12 +4560,12 @@
     }
   },
   {
-    "id": "baillons-crake",
+    "id": "baillon-s-crake",
     "name": "Baillon's Crake",
     "assameseName": "বাইলনৰ জিকৰ",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident  or winter visitor, usually found in reedy marshes and wetlands from October to April. A very small crake measuring 19-22 cm. It has warm brown upperparts heavily streaked with white and black, and greenish legs. Male vs. Female: Slightly dimorphic. The male has a prominent blue-grey face, throat, and breast. The female is similar but her blue-grey underparts are duller and washed with a brownish or buffy tone.",
-    "image": "images/birds/baillons-crake.avif",
+    "image": "images/birds/baillon-s-crake.avif",
     "ebird": {
       "speciesCode": "baicra1",
       "url": "https://ebird.org/species/baicra1"
@@ -4764,12 +4764,12 @@
     }
   },
   {
-    "id": "blyths-reed-warbler",
+    "id": "blyth-s-reed-warbler",
     "name": "Blyth's Reed Warbler",
     "assameseName": "ব্লাইথৰ নলটিপচী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A widespread winter visitor found in bushes and scrublands from September to April. Measures 13–14 cm. A plain, unstreaked olive-brown warbler with pale underparts, a relatively long and pointed bill, and a faint pale eyebrow (supercilium). Male vs. Female: Sexes are similar.",
-    "image": "images/birds/blyths-reed-warbler.avif",
+    "image": "images/birds/blyth-s-reed-warbler.avif",
     "ebird": {
       "speciesCode": "blrwar1",
       "url": "https://ebird.org/species/blrwar1"
