@@ -2282,7 +2282,7 @@ p {
     margin:24px 0;
 }
 .anatomy-container {
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .anatomy-layout {
@@ -3299,5 +3299,129 @@ MOBILE
     -webkit-touch-callout: none;
 
     user-select: none;
+
+}
+/* =========================================================
+   ANATOMY FEATURE SLIDER
+   ========================================================= */
+
+.diagram-window {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+
+/* The two slides sit side-by-side */
+
+.diagram-track {
+    display: flex;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+    will-change: transform;
+}
+
+
+/* Each slide occupies exactly half of the track */
+
+.anatomy-slide {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+
+/* Keep existing image-container behavior,
+   but make sure it fills its slide */
+
+.anatomy-slide .image-container {
+    width: 100%;
+    max-width: 760px;
+}
+
+
+/* Second state */
+
+.diagram-track.show-second {
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   EXPLORE OTHER FEATURES CONTROL
+   ========================================================= */
+
+.anatomy-switch {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.anatomy-switch button {
+    border: none;
+    background: transparent;
+    color: #215E37;
+
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    padding: 8px 14px;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.anatomy-switch button:hover {
+    transform: translateX(4px);
+}
+
+
+.anatomy-switch button:focus-visible {
+    outline: 2px solid #215E37;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+
+#anatomySwitchArrow {
+    font-size: 1.25rem;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .diagram-window {
+        border-radius: 18px;
+    }
+
+    .anatomy-switch {
+        margin-top: 16px;
+    }
+
+    .anatomy-switch button {
+        font-size: 1rem;
+    }
+
+    .diagram-track {
+        transition-duration: 0.55s;
+    }
 
 }
