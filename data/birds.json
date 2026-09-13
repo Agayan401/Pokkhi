@@ -2832,12 +2832,12 @@
     }
   },
   {
-    "id": "marsh-sandpipier",
-    "name": "Marsh Sandpipier",
+    "id": "marsh-sandpiper",
+    "name": "Marsh Sandpiper",
     "assameseName": "বোকাপানী খোঁচৰা / লৰীয়তী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 22-26 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/marsh-sandpipier.avif",
+    "image": "images/birds/marsh-sandpiper.avif",
     "ebird": {
       "speciesCode": "marsan",
       "url": "https://ebird.org/species/marsan"
@@ -4973,7 +4973,7 @@
     "assameseName": "ধূসৰ নলচুপি",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident in tall riverine grasslands, sandy scrub, and reeds. Measures 11–13 cm. A tiny, pale grey-brown warbler with faint dark streaking on the back and an exceptionally long, tapering tail with faint cross-barring that it frequently flicks. Male vs. Female: Sexes are similar.",
-    "image": "images/birds/delicate-prinia-graceful-prinia.avif",
+    "image": "images/birds/delicate-prinia.avif",
     "ebird": {
       "speciesCode": "grapri1",
       "url": "https://ebird.org/species/grapri1"
@@ -5016,12 +5016,12 @@
     }
   },
   {
-    "id": "fire-breasted-flowerpeacker",
-    "name": "Fire-breasted Flowerpeacker",
+    "id": "fire-breasted-flowerpecker",
+    "name": "Fire-breasted Flowerpecker",
     "assameseName": "বহ্নিবুকুৱা ফুলকুঁৱৰী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: No recent records. Mostly found high in the canopy of hill forests. Measures just 9 cm. A tiny, almost tail-less bird with a thin, curved bill. Male vs. Female: Highly dimorphic. The male is glossy metallic blue-black above and pale buff below, with a brilliant, blazing fiery-red patch right on the breast. The female is entirely olive-green above and buffy-yellow below, lacking the red patch.",
-    "image": "images/birds/fire-breasted-flowerpeacker.avif",
+    "image": "images/birds/fire-breasted-flowerpecker.avif",
     "ebird": {
       "speciesCode": "fibflo1",
       "url": "https://ebird.org/species/fibflo1"
@@ -5117,7 +5117,7 @@
     "assameseName": "মটীয়া বালিমাহী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor; commonly seen from September to April near rocky streams and rivers. Measures 18–19 cm. A sleek, slender bird with a conspicuously long tail that it bobs constantly. It has slate-grey upperparts, a distinct white supercilium (eyebrow), and bright yellow underparts (especially under the tail). Male vs. Female: Dimorphic primarily in breeding plumage. The breeding male develops a striking black throat, which the female lacks (her throat remains whitish/pale buff). In winter, both sexes look very similar with white throats, but males may show traces of black.",
-    "image": "images/birds/grey-wagtail.avif",
+    "image": "images/birds/gray-wagtail.avif",
     "ebird": {
       "speciesCode": "grywag",
       "url": "https://ebird.org/species/grywag"
@@ -5141,7 +5141,7 @@
     "assameseName": "ধোঁৱাবুকুৱা নলচুপি",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident, frequently found in scrub, tall grass, and secondary growth. Measures 11–13 cm. A small, active warbler. It is greyish-brown above with a whitish belly. During the breeding season, a prominent ashy-grey band appears across the breast. Male vs. Female: Sexes are generally similar, though the male in breeding plumage shows a bolder, darker grey breast band and a blackish bill compared to the female's paler band and lighter bill.",
-    "image": "images/birds/grey-breasted-prinia.avif",
+    "image": "images/birds/gray-breasted-prinia.avif",
     "ebird": {
       "speciesCode": "gybpri1",
       "url": "https://ebird.org/species/gybpri1"
@@ -5160,12 +5160,12 @@
     }
   },
   {
-    "id": "grey-lored-boradbill",
-    "name": "Grey-lored Boradbill",
+    "id": "grey-lored-broadbill",
+    "name": "Grey-lored Broadbill",
     "assameseName": "ৰূপালী বহল-ঠুটীয়া",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident in broadleaved evergreen forests of the foothills. Measures 16–17 cm. A plump, short-tailed canopy bird. It has silvery-grey upperparts, a pale grey belly, a bright rufous rump, and distinct blue-black edges to its flight feathers. A noticeable greyish lore (area between eye and bill) runs across the face. Male vs. Female: Dimorphic. The female features a narrow, incomplete silvery-white breast band that the male completely lacks.",
-    "image": "images/birds/grey-lored-boradbill.avif",
+    "image": "images/birds/grey-lored-broadbill.avif",
     "ebird": {
       "speciesCode": "sibbro2",
       "url": "https://ebird.org/species/sibbro2"
@@ -5213,7 +5213,7 @@
     "assameseName": "পাহাৰী নাচনী / পৰ্বতৰ নীলা নাচনী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A rare resident and altitudinal migrant; seen in foothills during winter. Measures 14–15 cm. A classic woodland flycatcher. Male vs. Female: Dimorphic. The male is deep blue above with a bright rufous-orange throat and breast that fades into a white belly. The female is warm olive-brown above, with a paler orange breast and no blue plumage.",
-    "image": "images/birds/hill-blue-flycatcher.avif",
+    "image": "images/birds/hill-Blue-flycatcher.avif",
     "ebird": {
       "speciesCode": "hibfly1",
       "url": "https://ebird.org/species/hibfly1"
@@ -5244,24 +5244,24 @@
     }
   },
   {
-    "id": "hodgsons-frogmouth",
+    "id": "hodgson-s-frogmouth",
     "name": "Hodgson's Frogmouth",
     "assameseName": "ভেকুলীমুখীয়া",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A rare year-round resident in the dense, dark undergrowth of broadleaved evergreen forests in the hills. Measures 30-34 cm. A highly cryptic, nocturnal bird that looks like a broken tree branch during the day. It has a relatively large head, large eyes, and a massive, wide, specialized bill meant for catching large insects. Male vs. Female: Highly dimorphic. The male is primarily heavily mottled with dark grey, brown, and prominent white spots. The female looks completely different, featuring a much warmer, rich rufous-chestnut base color with fewer white spots.",
-    "image": "images/birds/hodgsons-frogmouth.avif",
+    "image": "images/birds/hodgson-s-frogmouth.avif",
     "ebird": {
       "speciesCode": "hodfro1",
       "url": "https://ebird.org/species/hodfro1"
     }
   },
   {
-    "id": "hodgsons-redstart",
+    "id": "hodgson-s-redstart",
     "name": "Hodgson's Redstart",
     "assameseName": "হড্‌চনৰ ৰঙিলী / হড্‌চনৰ চমকা",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor to open forests and edges from October to March. Measures 15 cm. A slim, active bird that frequently quivers its bright rusty-orange tail. Male vs. Female: Dimorphic. The male has a slate-grey back, a black mask and throat, a large whit patch on the wing, and a rufous-orange belly. The female is uniform ash-grey above and pale below, lacking the black and white markings, but sharing the orange tail.",
-    "image": "images/birds/hodgsons-redstart.avif",
+    "image": "images/birds/hodgson-s-redstart.avif",
     "ebird": {
       "speciesCode": "hodred1",
       "url": "https://ebird.org/species/hodred1"
@@ -5357,7 +5357,7 @@
     "assameseName": "সৰু গলমণিকা",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Rare winter visitor to scrublands, bushes and arid edges from October to April. Measures 13.5 cm. A small, neat warbler. It has a grey head with a dark mask across the cheeks, a brown back, and strikingly clean, white underparts (the \"white throat\"). Male vs. Female: Sexes are identical.",
-    "image": "images/birds/lesser-whitethroat.avif",
+    "image": "images/birds/lesser-white-throat.avif",
     "ebird": {
       "speciesCode": "leswhi4",
       "url": "https://ebird.org/species/leswhi4"
@@ -5460,12 +5460,12 @@
     }
   },
   {
-    "id": "plae-blue-flycatcher",
-    "name": "Plae-blue Flycatcher",
+    "id": "pale-blue-flycatcher",
+    "name": "Pale-blue Flycatcher",
     "assameseName": "পাতল-নীলা নাচনী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident or seasonal migrant in dense, broadleaved hill forests. A medium-sized flycatcher (16–17 cm). Male vs. Female: Males are a beautiful cerulean blue above and pale greyish-blue below, fading to whitish on the belly. Females are drab brown above and greyish-brown below, completely lacking any blue feathers.",
-    "image": "images/birds/plae-blue-flycatcher.avif",
+    "image": "images/birds/pale-blue-flycatcher.avif",
     "ebird": {
       "speciesCode": "pabfly2",
       "url": "https://ebird.org/species/pabfly2"
@@ -5520,24 +5520,24 @@
     }
   },
   {
-    "id": "richards-pipit",
+    "id": "richard-s-pipit",
     "name": "Richard's Pipit",
     "assameseName": "মাটিমাহী / ৰিচাৰ্ডৰ মাটিমাহী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor to grasslands and agricultural fields. A large, lanky pipit (17–20 cm) with a stout bill and very long legs. It stands very upright and is heavily streaked dark brown above and pale buff below, with a streaked breast. Male vs. Female: Sexes look identical.",
-    "image": "images/birds/richards-pipit.avif",
+    "image": "images/birds/richard-s-pipit.avif",
     "ebird": {
       "speciesCode": "ricpip1",
       "url": "https://ebird.org/species/ricpip1"
     }
   },
   {
-    "id": "rofous-gorgetted-flycatcher",
-    "name": "Rofous-gorgetted Flycatcher",
+    "id": "rufous-gorgeted-flycatcher",
+    "name": "Rufous-gorgeted Flycatcher",
     "assameseName": "ৰঙাডিঙীয়া মাখিয়তী / মামৰকন্ঠী নাচনী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor to the plains and foothills (October to April). A small, active flycatcher (13–14 cm). Male vs. Female: Males have dark olive-brown upperparts, a blackish face with a white brow patch, a white throat, and a bright, glowing orange-rufous patch (gorget) on the breast. Females are similar but duller brown overall with a much smaller and paler breast patch.",
-    "image": "images/birds/rofous-gorgetted-flycatcher.avif",
+    "image": "images/birds/rufous-gorgeted-flycatcher.avif",
     "ebird": {
       "speciesCode": "rugfly1",
       "url": "https://ebird.org/species/rugfly1"
@@ -5748,12 +5748,12 @@
     }
   },
   {
-    "id": "straiated-grassbird",
-    "name": "Straiated grassbird",
+    "id": "straited-grassbird",
+    "name": "Straited grassbird",
     "assameseName": "দীঘল-নেজীয়া পখৰা টিপচী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor in tall wet grasslands and reeds. A very large, conspicuous warbler-like bird (22–28 cm). It has a heavily dark-streaked brown back, streaked breast, and a very long, graduated, ragged-looking tail. Male vs. Female: Sexes look identical.",
-    "image": "images/birds/straiated-grassbird.avif",
+    "image": "images/birds/straited-grassbird.avif",
     "ebird": {
       "speciesCode": "strgra1",
       "url": "https://ebird.org/species/strgra1"
@@ -5784,24 +5784,12 @@
     }
   },
   {
-    "id": "streated-weaver",
-    "name": "Streated Weaver",
-    "assameseName": "কজলা টোকোৰা চৰাই",
-    "iucnStatus": "LC",
-    "description": "Assam Seasonality: Year-round resident, strictly found in tall reedbeds and marshes. A small, finch-like bird (15 cm). It is the only weaver in the region with heavily dark-streaked underparts in all plumages. Male vs. Female: During the breeding season, the male develops a bright golden-yellow crown and a dark blackish face/throat. Females and non-breeding males lack the yellow and black, having a streaked crown and a pale eyebrow.",
-    "image": "images/birds/streated-weaver.avif",
-    "ebird": {
-      "speciesCode": "strwea2",
-      "url": "https://ebird.org/species/strwea2"
-    }
-  },
-  {
-    "id": "timmincks-stint",
+    "id": "timminck-s-stint",
     "name": "Timminck's Stint",
     "assameseName": "বালিচিৰিকা",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor (September to May) to muddy margins of wetlands and rivers. A tiny wader (13–15 cm). In winter, it is plain greyish-brown above and white below, with a distinctive uniform greyish wash across the breast. A key feature is its pale yellowish or greenish legs (unlike the black legs of the Little Stint). Male vs. Female: Sexes look identical in winter.",
-    "image": "images/birds/timmincks-stint.avif",
+    "image": "images/birds/timminck-s-stint.avif",
     "ebird": {
       "speciesCode": "temsti",
       "url": "https://ebird.org/species/temsti"
@@ -5820,12 +5808,12 @@
     }
   },
   {
-    "id": "wedge-tailed-green-pigepn",
-    "name": "Wedge-tailed Green Pigepn",
+    "id": "wedge-tailed-green-pigeon",
+    "name": "Wedge-tailed Green Pigeon",
     "assameseName": "শলখানেজীয়া হাইঠা",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Resident and altitudinal migrant in hill forests. A large, canopy-dwelling pigeon (30–33 cm) with overall yellowish-green plumage and a notably pointed, wedge-shaped tail. Male vs. Female: Males have a distinct maroon-red wash on the back/shoulders and a vibrant orange-rufous wash on the crown and breast. Females lack the maroon and orange entirely, being uniformly green.",
-    "image": "images/birds/wedge-tailed-green-pigepn.avif",
+    "image": "images/birds/wedge-tailed-green-pigeon.avif",
     "ebird": {
       "speciesCode": "wetpig1",
       "url": "https://ebird.org/species/wetpig1"
@@ -5904,12 +5892,12 @@
     }
   },
   {
-    "id": "white-tailed-stonchat",
-    "name": "White-tailed Stonchat",
+    "id": "white-tailed-stonechat",
+    "name": "White-tailed Stonechat",
     "assameseName": "বগানেজী শিলকতৰা",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A winter visitor, almost exclusively found in tall wet grasslands and river islands (Brahmaputra floodplains). A small, upright-perching bird (13–14 cm). Male vs. Female: Dimorphic. Males have a black head and back, a rusty-orange breast, and extensive white patches on the collar, wings, and inner tail feathers. Females are streaky brown above and pale buff below, lacking the striking black and prominent white patches.",
-    "image": "images/birds/white-tailed-stonchat.avif",
+    "image": "images/birds/white-tailed-stonechat.avif",
     "ebird": {
       "speciesCode": "whtsto2",
       "url": "https://ebird.org/species/whtsto2"
