@@ -1109,60 +1109,80 @@ const anatomyInfo = {
        "Crown": {
         title: "Crown",
         description: "The crown is the top of a bird's head, extending from the forehead towards the back of the head. Its colour, pattern, streaking and shape can be useful field marks.",
+        image: "images/crown.webp",
+        caption: "Crown of a Black Crown Night Heron.",
         examples: ["Black Crown Night Heron", "White-crowned Forktail"]
     },
 
     "Cheek": {
         title: "Cheek",
         description: "The cheek is the area of the head behind and below the eye. Its colour and markings can help distinguish closely related or similar-looking species.",
+        image: "images/cheek.webp",
+        caption: "Cheek of a Ruby-cheeked Sunbird.",
         examples: ["Ruby-cheeked Sunbird", "Brown-cheeked Fulvetta"]
     },
 
     "Neck": {
         title: "Neck",
         description: "The neck connects the head to the body and includes the areas around the throat and nape. Its colour, pattern and contrast can be useful when identifying birds.",
+        image: "images/neck.webp",
+        caption: "Neck of an Asian Woolly-necked Stork.",
         examples: ["Asian Woolly-necked Stork", "Black-necked Stork"]
     },
 
     "Back": {
         title: "Back",
         description: "The back is the upper surface of the body between the neck and rump. Its colour, pattern, streaking and contrast with the wings can be important field marks.",
+        image: "images/back.webp",
+        caption: "Back of a Scarlet-backed Flowerpecker.",
         examples: ["Scarlet-backed Flowerpecker", "Black-backed Forktail"]
     },
 
     "Scapulars": {
         title: "Scapulars",
         description: "The scapulars are feathers covering the shoulder region of a bird, between the back and the upper wing. Their colour and pattern can form distinctive patches or lines.",
+        image: "images/scapulars.webp",
+        caption: "Scapulars of a Greater Adjutant.",
         examples: ["Greater Adjutant", "Indian Pond-Heron"]
     },
 
     "Wing Coverts": {
         title: "Wing Coverts",
         description: "Wing coverts are feathers that cover and protect the bases of the larger wing feathers. Their colours and patterns can create important markings on the wing.",
+        image: "images/wing_coverts.webp",
+        caption: "Wing coverts of a Black-winged Kite.",
         examples: ["Black-winged Kite", "Red-wettled Lapwing"]
     },
 
     "Side": {
         title: "Side",
         description: "The side is the lateral area of the body between the breast and the flank. Its colour and markings can help distinguish species in the field.",
+        image: "images/side.webp",
+        caption: "Side of a Dark-sided Flycatcher.",
         examples: ["Dark-sided Flycatcher", "Gray-sided Bush Warbler"]
     },
 
     "Flank": {
         title: "Flank",
         description: "The flank is the side of the body between the breast and the belly, extending towards the area beneath the folded wing. Flank colour, streaking and patches can be useful identification marks.",
+        image: "images/flank.webp",
+        caption: "Flank of a Brownish-flanked Bush Warbler.",
         examples: ["Brownish-flanked Bush Warbler", "Rusty-flanked Treecreeper"]
     },
 
     "Upper Tail Coverts": {
         title: "Upper Tail Coverts",
         description: "The upper tail coverts are feathers covering the base of the tail on the upper side of the body. Their colour can form a noticeable contrast with the back, rump or tail.",
+        image: "images/upper_tail_coverts.webp",
+        caption: "Upper tail coverts of a Barn Swallow.",
         examples: ["Barn Swallow", "House Sparrow"]
     },
 
     "Leg": {
         title: "Leg",
         description: "The leg supports the bird's body and is adapted for walking, perching, climbing, swimming or hunting. Leg length, colour and structure can be useful identification features.",
+        image: "images/leg.webp",
+        caption: "Leg of a Slaty-legged Crake.",
         examples: ["Slaty-legged Crake", "Long-legged Buzzard"]
     },
 };
