@@ -1105,21 +1105,89 @@ const anatomyInfo = {
         image: "images/tail.webp",
         caption: "Tail of a Long-tailed Shrike.",
         examples: ["Long-tailed Shrike", "Fork-tailed Drongo"]
-    }
+    },
+       "Crown": {
+        title: "Crown",
+        description: "The crown is the top of a bird's head, extending from the forehead towards the back of the head. Its colour, pattern, streaking and shape can be useful field marks.",
+        examples: ["Black-crested Bulbul", "Red-whiskered Bulbul"]
+    },
+
+    "Cheek": {
+        title: "Cheek",
+        description: "The cheek is the area of the head behind and below the eye. Its colour and markings can help distinguish closely related or similar-looking species.",
+        examples: ["White-throated Laughingthrush", "Grey-headed Canary-Flycatcher"]
+    },
+
+    "Neck": {
+        title: "Neck",
+        description: "The neck connects the head to the body and includes the areas around the throat and nape. Its colour, pattern and contrast can be useful when identifying birds.",
+        examples: ["Indian Roller", "Black-hooded Oriole"]
+    },
+
+    "Back": {
+        title: "Back",
+        description: "The back is the upper surface of the body between the neck and rump. Its colour, pattern, streaking and contrast with the wings can be important field marks.",
+        examples: ["Oriental Magpie-Robin", "Black-naped Blue Flycatcher"]
+    },
+
+    "Scapulars": {
+        title: "Scapulars",
+        description: "The scapulars are feathers covering the shoulder region of a bird, between the back and the upper wing. Their colour and pattern can form distinctive patches or lines.",
+        examples: ["Common Kingfisher", "White-throated Kingfisher"]
+    },
+
+    "Wing Coverts": {
+        title: "Wing Coverts",
+        description: "Wing coverts are feathers that cover and protect the bases of the larger wing feathers. Their colours and patterns can create important markings on the wing.",
+        examples: ["Blue-throated Barbet", "Grey-headed Canary-Flycatcher"]
+    },
+
+    "Side": {
+        title: "Side",
+        description: "The side is the lateral area of the body between the breast and the flank. Its colour and markings can help distinguish species in the field.",
+        examples: ["Common Iora", "Oriental White-eye"]
+    },
+
+    "Flank": {
+        title: "Flank",
+        description: "The flank is the side of the body between the breast and the belly, extending towards the area beneath the folded wing. Flank colour, streaking and patches can be useful identification marks.",
+        examples: ["Grey-headed Fish Eagle", "White-breasted Waterhen"]
+    },
+
+    "Upper Tail Coverts": {
+        title: "Upper Tail Coverts",
+        description: "The upper tail coverts are feathers covering the base of the tail on the upper side of the body. Their colour can form a noticeable contrast with the back, rump or tail.",
+        examples: ["White-rumped Shama", "Black Redstart"]
+    },
+
+    "Leg": {
+        title: "Leg",
+        description: "The leg supports the bird's body and is adapted for walking, perching, climbing, swimming or hunting. Leg length, colour and structure can be useful identification features.",
+        examples: ["Little Egret", "Purple Heron"]
+    },
 };
 
 function updateInfoPanel(part) {
     const panel = document.getElementById("infoPanel");
     const data = anatomyInfo[part];
+
     if (!data) return;
+
+    const imageSection = data.image
+        ? `
+            <div class="anatomy-example">
+                <img src="${data.image}" alt="${data.title}">
+                <p class="example-caption">${data.caption}</p>
+            </div>
+        `
+        : "";
 
     panel.innerHTML = `
         <h2>${data.title}</h2>
         <p>${data.description}</p>
-        <div class="anatomy-example">
-            <img src="${data.image}" alt="${data.title}">
-            <p class="example-caption">${data.caption}</p>
-        </div>
+
+        ${imageSection}
+
         <h3>Examples in Pokkhi</h3>
         <ul>
             ${data.examples.map(bird => `<li>${bird}</li>`).join("")}
