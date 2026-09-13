@@ -3355,7 +3355,9 @@ MOBILE
 .anatomy-switch {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: -8px;
+    position: relative;
+    z-index: 2;
 }
 
 
