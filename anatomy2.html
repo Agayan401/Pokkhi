@@ -212,18 +212,16 @@
     <div class="anatomy-switch">
 
         <button id="anatomySwitch"
-                type="button"
-                aria-label="Explore other features">
+        type="button"
+        aria-label="Explore other features">
 
-            <span id="anatomySwitchText">
-                Explore other features
-            </span>
+    <span id="anatomySwitchArrow">→</span>
 
-            <span id="anatomySwitchArrow">
-                →
-            </span>
+    <span id="anatomySwitchText">
+        Explore other features
+    </span>
 
-        </button>
+</button>
 
     </div>
 
@@ -331,6 +329,153 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("diagramTrack");
+    const switchButton = document.getElementById("anatomySwitch");
+    const switchText = document.getElementById("anatomySwitchText");
+    const switchArrow = document.getElementById("anatomySwitchArrow");
+
+    if (!track || !switchButton) return;
+
+
+    let showingSecond = false;
+
+
+    function updateSlider() {
+
+        if (showingSecond) {
+
+    track.classList.add("show-second");
+
+    switchArrow.textContent = "←";
+
+    switchButton.insertBefore(
+        switchArrow,
+        switchText
+    );
+
+} else {
+
+    track.classList.remove("show-second");
+
+    switchArrow.textContent = "→";
+
+    switchButton.appendChild(
+        switchArrow
+    );
+
+}
+
+    }
+
+
+    function toggleSlider() {
+
+        showingSecond = !showingSecond;
+
+        updateSlider();
+
+    }
+
+
+    /* Desktop / tablet click */
+
+    switchButton.addEventListener("click", function () {
+
+        toggleSlider();
+
+    });
+
+
+    /* =====================================================
+       MOBILE SWIPE
+       ===================================================== */
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+
+    track.addEventListener("touchstart", function (event) {
+
+        if (event.touches.length !== 1) return;
+
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+
+    }, { passive: true });
+
+
+    track.addEventListener("touchend", function (event) {
+
+        if (!touchStartX) return;
+
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+
+        /* Ignore mostly vertical swipes */
+
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+
+            touchStartX = 0;
+            touchStartY = 0;
+
+            return;
+
+        }
+
+
+        /* Minimum swipe distance */
+
+        if (Math.abs(deltaX) < 60) {
+
+            touchStartX = 0;
+            touchStartY = 0;
+
+            return;
+
+        }
+
+
+        /* Swipe left = next feature set */
+
+        if (deltaX < 0 && !showingSecond) {
+
+            showingSecond = true;
+
+            updateSlider();
+
+        }
+
+
+        /* Swipe right = previous feature set */
+
+        else if (deltaX > 0 && showingSecond) {
+
+            showingSecond = false;
+
+            updateSlider();
+
+        }
+
+
+        touchStartX = 0;
+        touchStartY = 0;
+
+    }, { passive: true });
+
+
+    updateSlider();
+
+});
+
+</script>
 
 </body>
 
