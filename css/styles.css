@@ -1105,7 +1105,9 @@ p {
 
     display: flex;
 
-    min-height: 650px;
+    height: 90vh;
+    max-height: 90vh;
+    min-height: 0;
 }
 
 .modal-image {
