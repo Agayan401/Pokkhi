@@ -4967,7 +4967,18 @@
       "url": "https://ebird.org/species/daured1"
     }
   },
-
+  {
+    "id": "delicate-prinia-graceful-prinia",
+    "name": "Delicate Prinia / Graceful Prinia",
+    "assameseName": "ধূসৰ নলচুপি",
+    "iucnStatus": "LC",
+    "description": "Assam Seasonality: Year-round resident in tall riverine grasslands, sandy scrub, and reeds. Measures 11–13 cm. A tiny, pale grey-brown warbler with faint dark streaking on the back and an exceptionally long, tapering tail with faint cross-barring that it frequently flicks. Male vs. Female: Sexes are similar.",
+    "image": "images/birds/delicate-prinia.avif",
+    "ebird": {
+      "speciesCode": "grapri1",
+      "url": "https://ebird.org/species/grapri1"
+    }
+  },
   {
     "id": "dunlin",
     "name": "Dunlin",
