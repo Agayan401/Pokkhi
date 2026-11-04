@@ -288,15 +288,15 @@
     }
   },
   {
-    "id": "blue-whistling-thrush",
-    "name": "Blue Whistling Thrush",
+    "id": "yellow-billed-whistling-thrush",
+    "name": "Yellow Billed Whistling Thrush",
     "assameseName": "নীলমতী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 31-35 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/blue-whistling-thrush.avif",
+    "image": "images/birds/yellow-billed-whistling-thrush.avif",
     "ebird": {
-      "speciesCode": "blwthr1",
-      "url": "https://ebird.org/species/blwthr1"
+      "speciesCode": "bluwht2",
+      "url": "https://ebird.org/species/bluwht2"
     }
   },
   {
@@ -1452,12 +1452,12 @@
     }
   },
   {
-    "id": "dollarbird",
-    "name": "Dollarbird",
+    "id": "oriental-dollarbird",
+    "name": "Oriental Dollarbird",
     "assameseName": "নীলা কাও চৰাই",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 28-34 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/dollarbird.avif",
+    "image": "images/birds/oriental-dollarbird.avif",
     "ebird": {
       "speciesCode": "dollar1",
       "url": "https://ebird.org/species/dollar1"
@@ -2220,12 +2220,12 @@
     }
   },
   {
-    "id": "house-swift",
-    "name": "House Swift",
+    "id": "little-swift",
+    "name": "Little Swift (House)",
     "assameseName": "ঘৰ বতাহী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Active year-round resident or seasonal migrant in Assam's diverse floodplains and forest layers. The size of the bird is 13-15 cm. Distinctive local avian species with regional field marks. Dimorphism: Sexes vary; males frequently show brighter plumage during the spring breeding cycle.",
-    "image": "images/birds/house-swift.avif",
+    "image": "images/birds/little-swift.avif",
     "ebird": {
       "speciesCode": "houswi1",
       "url": "https://ebird.org/species/houswi1"
@@ -5117,7 +5117,7 @@
     "assameseName": "মটীয়া বালিমাহী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Winter visitor; commonly seen from September to April near rocky streams and rivers. Measures 18–19 cm. A sleek, slender bird with a conspicuously long tail that it bobs constantly. It has slate-grey upperparts, a distinct white supercilium (eyebrow), and bright yellow underparts (especially under the tail). Male vs. Female: Dimorphic primarily in breeding plumage. The breeding male develops a striking black throat, which the female lacks (her throat remains whitish/pale buff). In winter, both sexes look very similar with white throats, but males may show traces of black.",
-    "image": "images/birds/gray-wagtail.avif",
+    "image": "images/birds/grey-wagtail.avif",
     "ebird": {
       "speciesCode": "grywag",
       "url": "https://ebird.org/species/grywag"
@@ -5141,7 +5141,7 @@
     "assameseName": "ধোঁৱাবুকুৱা নলচুপি",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident, frequently found in scrub, tall grass, and secondary growth. Measures 11–13 cm. A small, active warbler. It is greyish-brown above with a whitish belly. During the breeding season, a prominent ashy-grey band appears across the breast. Male vs. Female: Sexes are generally similar, though the male in breeding plumage shows a bolder, darker grey breast band and a blackish bill compared to the female's paler band and lighter bill.",
-    "image": "images/birds/gray-breasted-prinia.avif",
+    "image": "images/birds/grey-breasted-prinia.avif",
     "ebird": {
       "speciesCode": "gybpri1",
       "url": "https://ebird.org/species/gybpri1"
@@ -5213,7 +5213,7 @@
     "assameseName": "পাহাৰী নাচনী / পৰ্বতৰ নীলা নাচনী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: A rare resident and altitudinal migrant; seen in foothills during winter. Measures 14–15 cm. A classic woodland flycatcher. Male vs. Female: Dimorphic. The male is deep blue above with a bright rufous-orange throat and breast that fades into a white belly. The female is warm olive-brown above, with a paler orange breast and no blue plumage.",
-    "image": "images/birds/hill-Blue-flycatcher.avif",
+    "image": "images/birds/hill-blue-flycatcher.avif",
     "ebird": {
       "speciesCode": "hibfly1",
       "url": "https://ebird.org/species/hibfly1"
@@ -5833,7 +5833,7 @@
   },
   {
     "id": "white-crowned-forktail",
-    "name": "White-crowned Forktail",
+    "name": "White-crowned Forktail (Northern Forktail)",
     "assameseName": "বগা-কপালী চেপেনানেজী",
     "iucnStatus": "LC",
     "description": "Assam Seasonality: Year-round resident along slow-moving forest streams in the foothills. The largest of the forktails (27–28 cm). It is black and white with a deeply forked tail, an entirely black back (no spots), and a very prominent, large white patch covering the front of the crown. Male vs. Female: Sexes look identical.",
