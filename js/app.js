@@ -21,19 +21,6 @@ function preloadHeroImages() {
     return loadHeroSlide(0);
 }
 
-function preloadHeroImages() {
-    return Promise.all(
-        preloadImages.map(src =>
-            new Promise(resolve => {
-                const img = new Image();
-                img.onload = resolve;
-                img.onerror = resolve;
-                img.src = src;
-            })
-        )
-    );
-}
-
 function hideLoaderIfReady() {
     if (animationFinished && birdsLoaded && heroImagesLoaded) {
         const logo = document.querySelector(".loader-logo");
