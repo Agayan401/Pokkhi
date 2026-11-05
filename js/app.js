@@ -780,14 +780,37 @@ function openModal(bird) {
     const image = document.getElementById("modalImage");
     const imageBlur = document.getElementById("modalImageBlur");
     const imagePath = `images/birds/${bird.id}.avif`;
+    const placeholder = "images/placeholder.jpg";
 
+    // Hide the previously displayed image
+    image.style.opacity = "0";
+    imageBlur.style.opacity = "0";
+
+    // Reveal the new image only after it loads
+    image.onload = () => {
+        if (image.getAttribute("src") === image.dataset.expectedSrc) {
+            image.style.opacity = "1";
+            imageBlur.style.opacity = "1";
+        }
+    };
+
+    // Handle missing images
+    image.onerror = () => {
+        if (image.getAttribute("src") !== image.dataset.expectedSrc) return;
+
+        if (image.dataset.expectedSrc !== placeholder) {
+            image.dataset.expectedSrc = placeholder;
+            image.src = placeholder;
+            imageBlur.src = placeholder;
+        } else {
+            image.style.opacity = "1";
+            imageBlur.style.opacity = "1";
+        }
+    };
+
+    image.dataset.expectedSrc = imagePath;
     image.src = imagePath;
     imageBlur.src = imagePath;
-
-    image.onerror = () => {
-        image.src = "images/placeholder.jpg";
-        imageBlur.src = "images/placeholder.jpg";
-    };
 
     document.getElementById("modalName").textContent = bird.name || "";
     document.getElementById("modalAssamese").textContent = bird.assameseName || "";
