@@ -1287,14 +1287,18 @@ p {
 
         width: 95vw;
 
+        height: 90vh;
         max-height: 90vh;
 
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     .modal-layout {
 
         flex-direction: column;
+
+        height: 100%;
+        max-height: 100%;
     }
 
 .modal-image {
@@ -1324,10 +1328,16 @@ p {
     object-fit: contain;
 }
 
-    .modal-details {
+.modal-details {
 
-        padding: 1.5rem;
-    }
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    padding: 1.5rem;
+
+    overflow-y: auto;
+}
 
     #modalName {
 
