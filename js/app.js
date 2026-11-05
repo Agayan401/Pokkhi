@@ -491,7 +491,11 @@ function renderBirdOfDay() {
     container.innerHTML = `
         <div class="bird-card featured-bird">
             <div class="featured-image-wrapper">
-                <img src="images/birds/cards/${bird.id}.avif" alt="${bird.name}" onerror="this.src='images/placeholder.jpg'">
+                <img src="images/birds/cards/${bird.id}.avif"
+                     alt="${bird.name}"
+                     loading="lazy"
+                     decoding="async"
+                     onerror="this.src='images/placeholder.jpg'">
                 <div class="featured-tag">Featured Today</div>
             </div>
             <div class="bird-info">
@@ -521,7 +525,11 @@ function renderBirds(birdList) {
         card.dataset.birdId = bird.id;
         card.innerHTML = `
             <div class="bird-image">
-                <img src="images/birds/cards/${bird.id}.avif" alt="${bird.name}" onerror="this.src='images/placeholder.jpg'">
+                <img src="images/birds/cards/${bird.id}.avif"
+                     alt="${bird.name}"
+                     loading="lazy"
+                     decoding="async"
+                     onerror="this.src='images/placeholder.jpg'">
             </div>
             <div class="bird-info">
                 <h3>${bird.name}</h3>
