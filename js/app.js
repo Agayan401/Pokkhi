@@ -17,12 +17,9 @@ const loaderSteps = [
     { action: " ", place: "Welcome to Pokkhi." }
 ];
 
-const preloadImages = [
-    "images/hero/hero1.avif",
-    "images/hero/hero2.avif",
-    "images/hero/hero3.avif",
-    "images/hero/hero4.avif"
-];
+function preloadHeroImages() {
+    return loadHeroSlide(0);
+}
 
 function preloadHeroImages() {
     return Promise.all(
@@ -1301,67 +1298,146 @@ function isMobileView() {
     return window.matchMedia("(max-width: 768px)").matches;
 }
 
-function initHeroSlideshow() {
-   const container = document.getElementById("heroSlideshow");
+function loadHeroSlide(index) {
+    const slides = document.querySelectorAll(".hero-slide");
+    const slide = slides[index];
 
-   if (container.children.length > 0) return;
+    if (!slide) return Promise.resolve(false);
+
+    const image = heroImages[index];
+    const imagePath = isMobileView() ? image.mobile : image.desktop;
+
+    // Image is already loaded
+    if (slide.dataset.loadedPath === imagePath) {
+        return Promise.resolve(true);
+    }
+
+    // Avoid loading the same image multiple times
+    if (
+        slide._heroLoadingPath === imagePath &&
+        slide._heroLoadPromise
+    ) {
+        return slide._heroLoadPromise;
+    }
+
+    slide._heroLoadingPath = imagePath;
+
+    slide._heroLoadPromise = new Promise(resolve => {
+        const img = new Image();
+
+        img.onload = () => {
+            // Apply only if this is still the requested image
+            if (slide._heroLoadingPath === imagePath) {
+                slide.style.backgroundImage = `url("${imagePath}")`;
+                slide.dataset.loadedPath = imagePath;
+                slide._heroLoadingPath = null;
+                slide._heroLoadPromise = null;
+                resolve(true);
+            } else {
+                resolve(false);
+            }
+        };
+
+        img.onerror = () => {
+            if (slide._heroLoadingPath === imagePath) {
+                slide._heroLoadingPath = null;
+                slide._heroLoadPromise = null;
+            }
+
+            resolve(false);
+        };
+
+        img.src = imagePath;
+    });
+
+    return slide._heroLoadPromise;
+}
+
+
+function initHeroSlideshow() {
     const slideshow = document.getElementById("heroSlideshow");
-    if (!slideshow) return;
+
+    if (!slideshow || slideshow.children.length > 0) return;
 
     heroImages.forEach((image, index) => {
         const slide = document.createElement("div");
+
         slide.className = "hero-slide";
-        const imagePath = isMobileView() ? image.mobile : image.desktop;
-        slide.style.backgroundImage = `url("${imagePath}")`;
-       if (index === 0) {
-    slide.style.opacity = "0.001";
+
+        if (index === 0) {
+            slide.classList.add("active");
+        }
+
+        slideshow.appendChild(slide);
+    });
 }
 
-slideshow.appendChild(slide);
-});
 
-
-
-    const slides = slideshow.querySelectorAll(".hero-slide");
-    if (slides.length > 0) {
-        slides[0].classList.add("active");
-
-requestAnimationFrame(() => {
-    slides[0].style.opacity = "";
-});
-    }
-
-    
-}
 function startHeroSlideshow() {
-
     const slides = document.querySelectorAll(".hero-slide");
 
     if (!slides.length) return;
 
-    let current = 0;
-
     if (slideshowInterval) {
-        clearInterval(slideshowInterval);
+        clearTimeout(slideshowInterval);
     }
 
-    slideshowInterval = setInterval(() => {
+    let current = 0;
+    let currentStartedAt = Date.now();
 
-        slides[current].classList.remove("active");
+    // Start loading the next image immediately
+    let nextIndex = (current + 1) % slides.length;
+    let nextImagePromise = loadHeroSlide(nextIndex);
 
-        current = (current + 1) % slides.length;
 
-        slides[current].classList.add("active");
+    function scheduleNextSlide() {
 
-    }, 5000);
+        const elapsed = Date.now() - currentStartedAt;
+        const remaining = Math.max(0, 5000 - elapsed);
 
+        slideshowInterval = setTimeout(async () => {
+
+            let candidate = nextIndex;
+            let loaded = await nextImagePromise;
+
+            // Skip images that fail to load
+            while (!loaded) {
+
+                candidate = (candidate + 1) % slides.length;
+
+                if (candidate === current) return;
+
+                nextImagePromise = loadHeroSlide(candidate);
+                loaded = await nextImagePromise;
+            }
+
+            // Transition only after the next image is ready
+            slides[current].classList.remove("active");
+            slides[candidate].classList.add("active");
+
+            current = candidate;
+            currentStartedAt = Date.now();
+
+            // Immediately preload the following image
+            nextIndex = (current + 1) % slides.length;
+            nextImagePromise = loadHeroSlide(nextIndex);
+
+            scheduleNextSlide();
+
+        }, remaining);
+    }
+
+    scheduleNextSlide();
 }
+
 
 function updateHeroImagePositions() {
     const slides = document.querySelectorAll(".hero-slide");
+
     slides.forEach((slide, index) => {
-        const image = heroImages[index];
-        slide.style.backgroundImage = isMobileView() ? `url("${image.mobile}")` : `url("${image.desktop}")`;
+        if (slide.dataset.loadedPath) {
+            loadHeroSlide(index);
+        }
     });
 }
 
@@ -1373,13 +1449,16 @@ if (sessionStorage.getItem("loaderShown")) {
     animationFinished = true;
     heroImagesLoaded = true;
 
-    loader.classList.add("loader-hidden");
-
     initHeroSlideshow();
 
-startHeroSlideshow();
+    preloadHeroImages().then(() => {
 
-loadBirds();
+        loader.classList.add("loader-hidden");
+        startHeroSlideshow();
+
+    });
+
+    loadBirds();
    
 
 } else {
