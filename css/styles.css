@@ -1140,6 +1140,8 @@ p {
     transform: scale(1.15);
 
     z-index: 1;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 /* Main image */
@@ -1157,6 +1159,8 @@ p {
     object-fit: contain;
 
     display: block;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 .modal-details {
