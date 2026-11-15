@@ -1023,6 +1023,12 @@ p {
     margin-bottom: .75rem;
 }
 
+.assamese-transliteration {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #6b7280;
+}
+
 .status-badge {
 
     display: inline-block;
@@ -1196,6 +1202,12 @@ p {
     margin-bottom: 1rem;
 
     padding: 0;
+}
+
+#modalAssamese .assamese-transliteration {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #6b7280;
 }
 
 #modalStatus {
