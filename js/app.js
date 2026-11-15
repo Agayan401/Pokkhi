@@ -354,6 +354,16 @@ function getStatusClass(status) {
         default: return "";
     }
 }
+function getAssameseDisplay(bird) {
+    const name = bird.assameseName || "";
+    const transliteration = bird.assameseTransliteration || "";
+
+    return `${name}${
+        transliteration
+            ? ` <span class="assamese-transliteration">(${transliteration})</span>`
+            : ""
+    }`;
+}
 
 async function loadBirds() {
     try {
@@ -484,7 +494,7 @@ function renderBirdOfDay() {
             </div>
             <div class="bird-info">
                 <h3>${bird.name}</h3>
-                <p class="assamese-name">${bird.assameseName || ""}</p>
+                <p class="assamese-name">${getAssameseDisplay(bird)}</p>
                 <span class="status-badge ${getStatusClass(bird.iucnStatus)}">${bird.iucnStatus || ""}</span>
                 <p class="featured-description">${(bird.description || "").substring(0, 180)}...</p>
                 <button class="featured-btn">Learn More</button>
@@ -517,7 +527,7 @@ function renderBirds(birdList) {
             </div>
             <div class="bird-info">
                 <h3>${bird.name}</h3>
-                <p class="assamese-name">${bird.assameseName || ""}</p>
+                <p class="assamese-name">${getAssameseDisplay(bird)}</p>
                 <span class="status-badge ${getStatusClass(bird.iucnStatus)}">${bird.iucnStatus || ""}</span>
             </div>
         `;
@@ -805,7 +815,8 @@ function openModal(bird) {
     imageBlur.src = imagePath;
 
     document.getElementById("modalName").textContent = bird.name || "";
-    document.getElementById("modalAssamese").textContent = bird.assameseName || "";
+    document.getElementById("modalAssamese").innerHTML =
+    getAssameseDisplay(bird);
 
     const modalStatus = document.getElementById("modalStatus");
     modalStatus.textContent = `IUCN Status: ${bird.iucnStatus || ""}`;
