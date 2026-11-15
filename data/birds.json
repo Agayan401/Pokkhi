@@ -1443,12 +1443,12 @@
     "assameseTransliteration": "Mugi-Bu.ku.wa Nasoni"
   },
   {
-    "id": "brown-cheeked-fulvatta",
-    "name": "Brown-cheeked Fulvatta",
+    "id": "brown-cheeked-fulvetta",
+    "name": "Brown-cheeked Fulvetta",
     "assameseName": "মুগী ফুলভিটা",
     "iucnStatus": "LC",
     "description": "Presence in Assam: Year-round resident in the undergrowth of mixed and bamboo forests. Identification: Measures 15–16.5 cm. A drab, small understory bird. It has a greyish crown, an olive-brown back, and pale buffy underparts. It gets its name from a distinct dark brownish wash on its cheeks, and it lacks the dark lateral crown stripes seen in similar fulvettas. Male vs. Female: Sexes are identical.",
-    "image": "images/birds/brown-cheeked-fulvatta.avif",
+    "image": "images/birds/brown-cheeked-fulvetta.avif",
     "ebird": {
       "speciesCode": "brcful1",
       "url": "https://ebird.org/species/brcful1"
