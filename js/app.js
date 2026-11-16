@@ -428,7 +428,7 @@ function updateStatistics() {
         document.getElementById("barCR").style.width = `${(cr / total) * 100}%`;
     }
 
-    document.getElementById("lastUpdated").textContent = "13-Sept-2026";
+    document.getElementById("lastUpdated").textContent = "16-Nov-2026";
 }
 
 function updateResultCount() {
@@ -470,7 +470,59 @@ const excludedBirds = new Set([
 "large-scimiter-babbler",
 "mountain-bulbul",
 "short-eared-owl",
-"wood-snipe"
+"wood-snipe",
+    "alpine-swift",
+    "ashy-throated-warbler",
+    "black-eagle",
+    "black-naped-oriole",
+    "blunt-winged-warbler",
+    "blyth-s-kingfisher",
+    "blyth-s-pipit",
+    "brown-backed-needletail",
+    "buff-barred-warbler",
+    "burmese-shrike",
+    "chestnut-headed-tesia",
+    "chestnut-tailed-minla",
+    "common-goldeneye",
+    "common-green-magpie",
+    "dark-rumped-swift",
+    "forest-wagtail",
+    "golden-crested-myna",
+    "golden-oriole",
+    "greater-scaup",
+    "greater-short-toed-lark",
+    "green-cochoa",
+    "grey-bellied-tesia",
+    "grey-sided-thrush",
+    "himalayan-cuckoo",
+    "himalayan-swiftlet",
+    "hodgson-s-hawk-cuckoo",
+    "hume-s-warbler",
+    "imperial-eagle",
+    "kentish-plover",
+    "lanceolated-warbler",
+    "lemon-rumped-warbler",
+    "long-billed-plover",
+    "mountain-tailorbird",
+    "red-throated-thrush",
+    "rosy-minivet",
+    "rosy-starling",
+    "russet-bush-warbler",
+    "russet-sparrow",
+    "rusty-bellied-shortwing",
+    "sapphire-flycatcher",
+    "silver-backed-needletail",
+    "slender-billed-oriole",
+    "steepe-eagle",
+    "tibetan-sand-plover",
+    "tricolored-munia",
+    "ultramarine-flycatcher",
+    "water-rail",
+    "white-bellied-heron",
+    "white-browed-fantail",
+    "white-browed-wagtail",
+    "white-tailed-eagle",
+    "white-throated-needletail"
 ]);
 
 function renderBirdOfDay() {
